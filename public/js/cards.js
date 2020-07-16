@@ -9,39 +9,6 @@ $(document).ready(function () {
 
 $(document).on('click', '.showCardContent', function () {
     getMedicationList();
-    $(document).on('click', '.notify', function () {
-        $(this).toggleClass("active");
-    });
-
-    $(document).on('click', '.alert-me', function () {
-        $(this).toggleClass("active");
-    });
-
-    $(document).on('click', '.notifyAll', function () {
-        $(this).toggleClass("active");
-        var that = $(this);
-        $(this).parents(".collapse, .cardContent").find(".notify").each(function () {
-            selectAll($(this), that);
-        });
-    });
-
-    $(document).on('click', '.checkAll', function () {
-        $(this).toggleClass("active");
-        var that = $(this);
-        $(this).parents(".collapse, .cardContent").find(".alert-me").each(function () {
-            selectAll($(this), that);
-        });
-    });
-
-    function selectAll(self, that) {
-        if (!self.hasClass("active")) {
-            self.addClass("active");
-        }
-
-        if (!that.hasClass("active")) {
-            self.removeClass("active");
-        }
-    }
 });
 
 function getMedicationList() {

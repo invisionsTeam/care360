@@ -503,3 +503,9 @@ form.add-medication .form-control {
 form.add-medication button[type="submit"] {
     border-radius: 0;
 }
+
+#todaysDate span{
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: #363c3f;
+}

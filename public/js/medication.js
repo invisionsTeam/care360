@@ -4,18 +4,14 @@ $(document).ready(function () {
     showMedicationList();
 });
 
-function selectAll(self, that) {
-    if (!self.hasClass("active")) {
-        self.addClass("active");
-    }
-
-    if (!that.hasClass("active")) {
-        self.removeClass("active");
-    }
-}
-
 $(document).on('click', '.carousel-item li', function () {
     calendarInput = $(this).data('date');
+    var calDateFormat = calendarInput !== undefined ? calendarInput.split("-") : '';
+    var formatDate = calDateFormat[1] + "/" + calDateFormat[0] + "/" + calDateFormat[2];
+    var calendarDate = new Date(formatDate);
+    var weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    $("#todaysDate span").text(months[calendarDate.getMonth()] + " " + calendarDate.getDate() + " " + weekDays[calendarDate.getDay()])
     sortJsonByTime(calendarInput);
 });
 
@@ -32,8 +28,8 @@ $(document).on('click', '#addMedication', function () {
         "suggestedTime": $("#medicationTime").val(),
         "startDate": $("#medicationStartDate").val(),
         "endDate": $("#medicationEndDate").val(),
-        "shape": "",
-        "color": "",
+        "shape": $("input[name='medicineType']:checked").val() !== undefined ? $("input[name='medicineType']:checked").val() : "",
+        "color": $("input[name='medicinColor']:checked").val() !== undefined ? $("input[name='medicinColor']:checked").val() : "",
         "notes": $("#medicationNotes").val()
     };
     newData.medication.push(toDo);
@@ -154,31 +150,6 @@ function sortJsonByTime(calendarInput) {
 
             $("#scheduleAccordion #heading1 .btn").removeClass("collapsed");
             $("#scheduleAccordion #collapse1").addClass("show");
-
-            $(document).on('click', '.notify', function () {
-                $(this).toggleClass("active");
-            });
-            
-            $(document).on('click', '.alert-me', function () {
-                $(this).toggleClass("active");
-            });
-            
-            $(document).on('click', '.notifyAll', function () {
-                $(this).toggleClass("active");
-                var that = $(this);
-                $(this).parents(".collapse, .cardContent").find(".notify").each(function () {
-                    selectAll($(this), that);
-                });
-            });
-            
-            $(document).on('click', '.checkAll', function () {
-                $(this).toggleClass("active");
-                var that = $(this);
-                $(this).parents(".collapse, .cardContent").find(".alert-me").each(function () {
-                    selectAll($(this), that);
-                });
-            });
-
         }
     }
 }
