@@ -149,20 +149,56 @@ $(document).ready(function () {
 
     $(document).on('click', '.notify', function () {
         $(this).toggleClass("active");
+        var notifyCount = parseInt($(".bell-counter").text());
+        if ($(this).hasClass("active")) {
+            notifyCount++;
+        } else {
+            if (notifyCount !== 0)
+                notifyCount--;
+            if ($(this).parents(".collapse, .cardContent").find(".notifyAll").hasClass("active")) {
+                $(this).parents(".collapse, .cardContent").find(".notifyAll").toggleClass("active");
+            }
+        }
+        if (notifyCount >= 10) {
+            $(".bell-counter").css("padding", "0 2px");
+        } else {
+            $(".bell-counter").css("padding", "0 6px");
+        }
+        $(".bell-counter").text(notifyCount);
     });
-    
+
     $(document).on('click', '.alert-me', function () {
         $(this).toggleClass("active");
+        if (!$(this).hasClass("active")) {
+            if ($(this).parents(".collapse, .cardContent").find(".checkAll").hasClass("active")) {
+                $(this).parents(".collapse, .cardContent").find(".checkAll").toggleClass("active");
+            }
+        }
     });
-    
+
     $(document).on('click', '.notifyAll', function () {
         $(this).toggleClass("active");
         var that = $(this);
+        var notifyCount = parseInt($(".bell-counter").text());
         $(this).parents(".collapse, .cardContent").find(".notify").each(function () {
-            selectAll($(this), that);
+            if (!$(this).hasClass("active")) {
+                $(this).addClass("active");
+                notifyCount++;
+            }
+            if (!that.hasClass("active")) {
+                $(this).removeClass("active");
+                if (notifyCount !== 0)
+                    notifyCount--;
+            }
         });
+        if (notifyCount >= 10) {
+            $(".bell-counter").css("padding", "0 2px")
+        } else {
+            $(".bell-counter").css("padding", "0 6px")
+        }
+        $(".bell-counter").text(notifyCount);
     });
-    
+
     $(document).on('click', '.checkAll', function () {
         $(this).toggleClass("active");
         var that = $(this);
@@ -175,7 +211,7 @@ $(document).ready(function () {
         if (!self.hasClass("active")) {
             self.addClass("active");
         }
-    
+
         if (!that.hasClass("active")) {
             self.removeClass("active");
         }
