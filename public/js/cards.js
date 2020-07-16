@@ -9,7 +9,6 @@ $(document).ready(function () {
 
 $(document).on('click', '.showCardContent', function () {
     getMedicationList();
-    
 });
 
 function getMedicationList() {
