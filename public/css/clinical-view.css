@@ -109,7 +109,7 @@
 }
 
 .nav-tabs.nav-tabs-margin {
-    margin: auto 215px;
+    margin: auto 235px;
 }
 
 .nav-tabs .tab-panel-margin {
@@ -136,14 +136,18 @@
     border: none;
 }
 
+.risk-patients-tabs .risk-tabs.nav-tabs>li {
+    margin: auto;
+}
+
 .risk-patients-tabs .tab-panel:not(:last-child) {
     border-right: 1px solid #0051BF;
 }
 
-.risk-patients-tabs .nav-tabs .tab-panel.active {
+/* .risk-patients-tabs .nav-tabs li.active {
     background-color: #0051BF;
     color: #fff;
-}
+} */
 
 .nav.risk-tabs li a {
     padding: 6px 38px;
@@ -151,4 +155,23 @@
 
 .custom-tab-pane .risk-patients-tabs .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover, .nav-tabs>li>a:hover {
     border: none;
+}
+
+/* Cards */
+
+.cards-row {
+    display: flex;
+}
+
+.custom-col-sm-4.col-sm-4 {
+    background-color: #fff;
+    margin-bottom: 10px;
+    padding: 10px;
+    border: 1px solid #dddddd;
+}
+
+.custom-card.card {
+    width: 35rem;
+    margin: 15px auto;
+    box-shadow: none;
 }
