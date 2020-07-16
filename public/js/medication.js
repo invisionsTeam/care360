@@ -22,8 +22,8 @@ $(document).on('click', '#addMedication', function () {
         "suggestedTime": $("#medicationTime").val(),
         "startDate": $("#medicationStartDate").val(),
         "endDate": $("#medicationEndDate").val(),
-        "shape": "",
-        "color": "",
+        "shape": $("input[name='medicineType']:checked").val() !== undefined ? $("input[name='medicineType']:checked").val() : "",
+        "color": $("input[name='medicinColor']:checked").val() !== undefined ?$("input[name='medicinColor']:checked").val() : "",
         "notes": $("#medicationNotes").val()
     };
     newData.medication.push(toDo);
