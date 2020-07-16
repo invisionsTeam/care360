@@ -6,6 +6,12 @@ $(document).ready(function () {
 
 $(document).on('click', '.carousel-item li', function () {
     calendarInput = $(this).data('date');
+    var calDateFormat = calendarInput !== undefined ? calendarInput.split("-") : '';
+    var formatDate = calDateFormat[1] + "/" + calDateFormat[0] + "/" + calDateFormat[2];
+    var calendarDate = new Date(formatDate);
+    var weekDays = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+    var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
+    $("#todaysDate span").text(months[calendarDate.getMonth()] + " " + calendarDate.getDate() + " " + weekDays[calendarDate.getDay()])
     sortJsonByTime(calendarInput);
 });
 
@@ -23,7 +29,7 @@ $(document).on('click', '#addMedication', function () {
         "startDate": $("#medicationStartDate").val(),
         "endDate": $("#medicationEndDate").val(),
         "shape": $("input[name='medicineType']:checked").val() !== undefined ? $("input[name='medicineType']:checked").val() : "",
-        "color": $("input[name='medicinColor']:checked").val() !== undefined ?$("input[name='medicinColor']:checked").val() : "",
+        "color": $("input[name='medicinColor']:checked").val() !== undefined ? $("input[name='medicinColor']:checked").val() : "",
         "notes": $("#medicationNotes").val()
     };
     newData.medication.push(toDo);
