@@ -5,6 +5,9 @@
   <link rel="stylesheet" type="text/css" href="css/cards.css">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+  <!-- Roboto font -->
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
   <!-- Font Awesome -->
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <!-- Google Fonts -->
@@ -97,124 +100,540 @@
     <div class="container container-background">
       <div id="allRiskPatients" class="card-pane">
         <div class="cards-row">
-          <div class="custom-card card">
-            <div class="card-body">
-              <a class="profile-image" href="#"><img class="user-profile-icon" src="images/profile-pic.svg"
-                alt="user profile icon"></a>
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+          <div class="custom-card card border-red">
+            <div class="display-flex width100 padding20 bg-gray bg-image-red">
+              <div class="margin1020 width25">
+                <a class="profile-image" href="#"><img class="marginleft5" src="images/clinical/biguser.png"
+                    alt="user profile icon"></a>
+                <div class="custom-card-title margintop15 color-dark">Day 6</div>
+              </div>
+              <div>
+                <h5 class="card-title custom-card-title color-dark">Paul Johnson  49/M</h5>
+                <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
+                <div class="margintop10">
+                  <div class="custom-card-subtitle color-blue">Coronary Artery Bypass</div>
+                  <div class="custom-card-subtitle color-dark">Diabetes Mellitus</div>
+                </div>
+              </div>
+            </div>
+            <div class="padding20">
+              <div>
+                <div class="text-body color-dark border-bottom-gray">Vitals (1, July, 2020 8:00 am)</div>
+                <div class="width100 margintop15 display-flex">
+                  <div class="width50 display-flex">
+                    <img class="margintop5 image24" src="images/clinical/heartrate.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">Heart Rate</div>
+                      <div class="custom-card-title color-dark">94</div>
+                    </div>
+                  </div>
+                  <div class="display-flex">
+                    <img class="margintop5 image24" src="images/clinical/bloodpressure.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">SBP/DBP</div>
+                      <div class="custom-card-title color-red">140/90</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="width100 margintop20 display-flex">
+                  <div class="width50 display-flex">
+                    <img class="margintop5 image24" src="images/clinical/temp.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">Temp</div>
+                      <div class="custom-card-title color-dark">95.5</div>
+                    </div>
+                  </div>
+                  <div class="display-flex">
+                    <img class="margintop5 image24" src="images/clinical/oxyzen.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">SPO2</div>
+                      <div class="custom-card-title color-dark">97</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Blood Sugar Level  (07, July, 2020  8:00 am)</div>
+                <div class="margintop20">
+                  <div class="text-body-regular color-dark">Blood Sugar</div>
+                  <div class="display-flex">
+                    <img class="image15 margintop10 marginright5" src="images/clinical/arrow-up.png" alt="up arrow icon">
+                    <div class="custom-card-title color-red">240</div>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Symptoms</div>
+                <div class="margintop20">
+                  <div class="display-flex text-body-regular color-dark symptoms">
+                    <li>Fatigue</li>
+                    <li>Headache</li>
+                    <li>Pain</li>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
+                <div class="margintop10">
+                  <div class="display-flex">
+                    <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
+                    <div class="marginleft15">
+                      <div class="custom-card-title color-dark">20, July 2020</div>
+                      <div class="text-body-regular color-dark">11:30 am  45 min</div>
+                    </div>
+                    <div class=" marginleft15 text-body-regular color-dark">12 more days left</div>    
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Adherence</div>
+                <div class="margintop20">
+                  <div class="display-flex">
+                    <div class="paddingtop10p"><img class="image2417" src="images/clinical/missing-alert.png" alt="alert icon"></div>    
+                    <div class="text-body-regular color-dark marginleft15">
+                      <li>You missed <span class="color-red">2 Medications</span> last week</li>
+                      <li>Unstable blood sugar</li>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="custom-card card">
-            <div class="card-body">
-              <a class="profile-image" href="#"><img class="user-profile-icon" src="images/profile-pic.svg"
-                alt="user profile icon"></a>
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+          <div class="custom-card card border-red">
+            <div class="display-flex width100 padding20 bg-gray bg-image-red">
+              <div class="margin1020 width25">
+                <a class="profile-image" href="#"><img class="marginleft5" src="images/clinical/biguser.png"
+                    alt="user profile icon"></a>
+                <div class="custom-card-title margintop15 color-dark">Day 9</div>
+              </div>
+              <div>
+                <h5 class="card-title custom-card-title color-dark">Jane Doe 36/M</h5>
+                <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
+                <div class="margintop10">
+                  <div class="custom-card-subtitle color-blue">Mitral Valve Replacement</div>
+                  <div class="custom-card-subtitle color-dark">Hypertension</div>
+                </div>
+              </div>
+            </div>
+            <div class="padding20">
+              <div>
+                <div class="text-body color-dark border-bottom-gray">Vitals (1, July, 2020 8:00 am)</div>
+                <div class="width100 margintop15 display-flex">
+                  <div class="width50 display-flex">
+                    <img class="margintop5 image24" src="images/clinical/heartrate.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">Heart Rate</div>
+                      <div class="custom-card-title color-dark">94</div>
+                    </div>
+                  </div>
+                  <div class="display-flex">
+                    <img class="margintop5 image24" src="images/clinical/bloodpressure.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">SBP/DBP</div>
+                      <div class="custom-card-title color-red">142/102</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="width100 margintop20 display-flex">
+                  <div class="width50 display-flex">
+                    <img class="margintop5 image24" src="images/clinical/temp.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">Temp</div>
+                      <div class="custom-card-title color-red">102.2</div>
+                    </div>
+                  </div>
+                  <div class="display-flex">
+                    <img class="margintop5 image24" src="images/clinical/oxyzen.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">SPO2</div>
+                      <div class="custom-card-title color-dark">97</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">PT INR Test (05, July, 2020 8:00 am)</div>
+                <div class="margintop20">
+                  <div class="text-body-regular color-dark">INR</div>
+                  <div class="display-flex">
+                    <img class="image15 margintop10 marginright5" src="images/clinical/arrow-up.png" alt="up arrow icon">
+                    <div class="custom-card-title color-red">3.58</div>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Symptoms</div>
+                <div class="margintop20">
+                  <div class="display-flex text-body-regular color-dark symptoms">
+                    <li>Fatigue</li>
+                    <li>Headache</li>
+                    <li>Pain</li>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
+                <div class="margintop10">
+                  <div class="display-flex">
+                    <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
+                    <div class="marginleft15">
+                      <div class="custom-card-title color-dark">22, July 2020</div>
+                      <div class="text-body-regular color-dark">11:30 am  45 min</div>
+                    </div>
+                    <div class=" marginleft15 text-body-regular color-dark">11 more days left</div>    
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Adherence</div>
+                <div class="margintop20">
+                  <div class="display-flex">
+                    <div class="paddingtop10p"><img class="image2417" src="images/clinical/missing-alert.png" alt="alert icon"></div>    
+                    <div class="text-body-regular color-dark marginleft15">
+                      <li>You missed <span class="color-red">3 Medications</span> last week</li>
+                      <li>Higher INR, revisit medications</li>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="custom-card card">
-            <div class="card-body">
-              <a class="profile-image" href="#"><img class="user-profile-icon" src="images/profile-pic.svg"
-                alt="user profile icon"></a>
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+          <div class="custom-card card border-red">
+            <div class="display-flex width100 padding20 bg-gray bg-image-red">
+              <div class="margin1020 width25">
+                <a class="profile-image" href="#"><img class="marginleft5" src="images/clinical/biguser.png"
+                    alt="user profile icon"></a>
+                <div class="custom-card-title margintop15 color-dark">Day 12</div>
+              </div>
+              <div>
+                <h5 class="card-title custom-card-title color-dark">Elizabeth Paul 35/F</h5>
+                <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
+                <div class="margintop10">
+                  <div class="custom-card-subtitle color-dark">Diabetes Mellitus</div>
+                </div>
+              </div>
+            </div>
+            <div class="padding20">
+              <div>
+                <div class="text-body color-dark border-bottom-gray">Blood Sugar Level  (09, July, 2020  9:00 am)</div>
+                <div class="margintop20">
+                  <div class="text-body-regular color-dark">Blood Sugar</div>
+                  <div class="display-flex">
+                    <img class="image15 margintop10 marginright5" src="images/clinical/arrow-up.png" alt="up arrow icon">
+                    <div class="custom-card-title color-red">240</div>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Symptoms</div>
+                <div class="margintop20">
+                  <div class="display-flex text-body-regular color-dark symptoms">
+                    <li>Fatigue</li>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
+                <div class="margintop10">
+                  <div class="display-flex">
+                    <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
+                    <div class="marginleft15">
+                      <div class="custom-card-title color-dark">15, July 2020</div>
+                      <div class="text-body-regular color-dark">11:30 am  45 min</div>
+                    </div>
+                    <div class=" marginleft15 text-body-regular color-dark">7 more days left</div>    
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Adherence</div>
+                <div class="margintop20">
+                  <div class="display-flex">
+                    <div class="paddingtop10p"><img class="image2417" src="images/clinical/missing-alert.png" alt="alert icon"></div>    
+                    <div class="text-body-regular color-dark marginleft15">
+                      <li>You missed <span class="color-red">3 Medications</span> last week</li>
+                      <li>Unstable blood sugar</li>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
 
         <div class="cards-row">
-          <div class="custom-card card">
-            <div class="card-body">
-              <a class="profile-image" href="#"><img class="user-profile-icon" src="images/profile-pic.svg"
-                alt="user profile icon"></a>
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+          <div class="custom-card card border-red">
+            <div class="display-flex width100 padding20 bg-gray bg-image-red">
+              <div class="margin1020 width25">
+                <a class="profile-image" href="#"><img class="marginleft5" src="images/clinical/biguser.png"
+                    alt="user profile icon"></a>
+                <div class="custom-card-title margintop15 color-dark">Day 7</div>
+              </div>
+              <div>
+                <h5 class="card-title custom-card-title color-dark">Christian L 45/M</h5>
+                <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
+                <div class="margintop10">
+                  <div class="custom-card-subtitle color-dark">Hypertension</div>
+                </div>
+              </div>
+            </div>
+            <div class="padding20">
+              <div>
+                <div class="text-body color-dark border-bottom-gray">Vitals (1, July, 2020 8:00 am)</div>
+                <div class="width100 margintop15 display-flex">
+                  <div class="width50 display-flex">
+                    <img class="margintop5 image24" src="images/clinical/heartrate.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">Heart Rate</div>
+                      <div class="custom-card-title color-dark">94</div>
+                    </div>
+                  </div>
+                  <div class="display-flex">
+                    <img class="margintop5 image24" src="images/clinical/bloodpressure.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">SBP/DBP</div>
+                      <div class="custom-card-title color-red">142/102</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Symptoms</div>
+                <div class="margintop20">
+                  <div class="display-flex text-body-regular color-dark symptoms">
+                    <li>Fatigue</li>
+                    <li>Headache</li>
+                    <li>Pain</li>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
+                <div class="margintop10">
+                  <div class="display-flex">
+                    <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
+                    <div class="marginleft15">
+                      <div class="custom-card-title color-dark">20, July 2020</div>
+                      <div class="text-body-regular color-dark">11:30 am  45 min</div>
+                    </div>
+                    <div class=" marginleft15 text-body-regular color-dark">12 more days left</div>    
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Adherence</div>
+                <div class="margintop20">
+                  <div class="display-flex">
+                    <div class="paddingtop10p"><img class="image2417" src="images/clinical/missing-alert.png" alt="alert icon"></div>    
+                    <div class="text-body-regular color-dark marginleft15">
+                      <li>You missed <span class="color-red">4 Medications</span> last week</li>
+                      <li>Unstable blood sugar</li>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="custom-card card">
-            <div class="card-body">
-              <a class="profile-image" href="#"><img class="user-profile-icon" src="images/profile-pic.svg"
-                alt="user profile icon"></a>
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+          <div class="custom-card card border-orange">
+            <div class="display-flex width100 padding20 bg-gray bg-image-orange">
+              <div class="margin1020 width25">
+                <a class="profile-image" href="#"><img class="marginleft5" src="images/clinical/biguser.png"
+                    alt="user profile icon"></a>
+                <div class="custom-card-title margintop15 color-dark">Day 9</div>
+              </div>
+              <div>
+                <h5 class="card-title custom-card-title color-dark">John Steve  43/M</h5>
+                <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
+                <div class="margintop10">
+                  <div class="custom-card-subtitle color-blue">Mitral Valve Replacement</div>
+                  <div class="custom-card-subtitle color-dark">Hypertension</div>
+                </div>
+              </div>
+            </div>
+            <div class="padding20">
+              <div>
+                <div class="text-body color-dark border-bottom-gray">Vitals (1, July, 2020 8:00 am)</div>
+                <div class="width100 margintop15 display-flex">
+                  <div class="width50 display-flex">
+                    <img class="margintop5 image24" src="images/clinical/heartrate.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">Heart Rate</div>
+                      <div class="custom-card-title color-dark">94</div>
+                    </div>
+                  </div>
+                  <div class="display-flex">
+                    <img class="margintop5 image24" src="images/clinical/bloodpressure.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">SBP/DBP</div>
+                      <div class="custom-card-title color-dark">120/90</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="width100 margintop20 display-flex">
+                  <div class="width50 display-flex">
+                    <img class="margintop5 image24" src="images/clinical/temp.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">Temp</div>
+                      <div class="custom-card-title color-dark">95.5</div>
+                    </div>
+                  </div>
+                  <div class="display-flex">
+                    <img class="margintop5 image24" src="images/clinical/oxyzen.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">SPO2</div>
+                      <div class="custom-card-title color-dark">97</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">PT INR Test (05, July, 2020 8:00 am)</div>
+                <div class="margintop20">
+                  <div class="text-body-regular color-dark">INR</div>
+                  <div class="display-flex">
+                    <img class="image15 margintop10 marginright5" src="images/clinical/arrow-up.png" alt="up arrow icon">
+                    <div class="custom-card-title color-red">3.58</div>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Symptoms</div>
+                <div class="margintop20">
+                  <div class="display-flex text-body-regular color-dark symptoms">
+                    <li>Fatigue</li>
+                    <li>Headache</li>
+                    <li>Pain</li>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
+                <div class="margintop10">
+                  <div class="display-flex">
+                    <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
+                    <div class="marginleft15">
+                      <div class="custom-card-title color-dark">22, July 2020</div>
+                      <div class="text-body-regular color-dark">11:30 am  45 min</div>
+                    </div>
+                    <div class=" marginleft15 text-body-regular color-dark">11 more days left</div>    
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Adherence</div>
+                <div class="margintop20">
+                  <div class="display-flex">
+                    <div class="paddingtop10p"><img class="image2417" src="images/clinical/missing-alert.png" alt="alert icon"></div>    
+                    <div class="text-body-regular color-dark marginleft15">
+                      <li>You missed <span class="color-red">2 Medications</span> last week</li>
+                      <li>Higher INR, revisit medications</li>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
 
-          <div class="custom-card card">
-            <div class="card-body">
-              <a class="profile-image" href="#"><img class="user-profile-icon" src="images/profile-pic.svg"
-                alt="user profile icon"></a>
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+          <div class="custom-card card border-green">
+            <div class="display-flex width100 padding20 bg-gray bg-image-green">
+              <div class="margin1020 width25">
+                <a class="profile-image" href="#"><img class="marginleft5" src="images/clinical/biguser.png"
+                    alt="user profile icon"></a>
+                <div class="custom-card-title margintop15 color-dark">Day 12</div>
+              </div>
+              <div>
+                <h5 class="card-title custom-card-title color-dark">Julie John  38/F</h5>
+                <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
+                <div class="margintop10">
+                  <div class="custom-card-subtitle color-blue">Mitral Valve Replacement</div>
+                  <div class="custom-card-subtitle color-dark">Hypertension</div>
+                </div>
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div class="cards-row">
-          <div class="custom-card card">
-            <div class="card-body">
-              <a class="profile-image" href="#"><img class="user-profile-icon" src="images/profile-pic.svg"
-                alt="user profile icon"></a>
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
-
-          <div class="custom-card card">
-            <div class="card-body">
-              <a class="profile-image" href="#"><img class="user-profile-icon" src="images/profile-pic.svg"
-                alt="user profile icon"></a>
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
-            </div>
-          </div>
-
-          <div class="custom-card card">
-            <div class="card-body">
-              <a class="profile-image" href="#"><img class="user-profile-icon" src="images/profile-pic.svg"
-                alt="user profile icon"></a>
-              <h5 class="card-title">Card title</h5>
-              <h6 class="card-subtitle mb-2 text-muted">Card subtitle</h6>
-              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
-                content.</p>
-              <a href="#" class="card-link">Card link</a>
-              <a href="#" class="card-link">Another link</a>
+            <div class="padding20">
+              <div>
+                <div class="text-body color-dark border-bottom-gray">Vitals (1, July, 2020 8:00 am)</div>
+                <div class="width100 margintop15 display-flex">
+                  <div class="width50 display-flex">
+                    <img class="margintop5 image24" src="images/clinical/heartrate.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">Heart Rate</div>
+                      <div class="custom-card-title color-dark">94</div>
+                    </div>
+                  </div>
+                  <div class="display-flex">
+                    <img class="margintop5 image24" src="images/clinical/bloodpressure.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">SBP/DBP</div>
+                      <div class="custom-card-title color-dark">120/90</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="width100 margintop20 display-flex">
+                  <div class="width50 display-flex">
+                    <img class="margintop5 image24" src="images/clinical/temp.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">Temp</div>
+                      <div class="custom-card-title color-dark">95.5</div>
+                    </div>
+                  </div>
+                  <div class="display-flex">
+                    <img class="margintop5 image24" src="images/clinical/oxyzen.png" alt="heart rate icon">
+                    <div class="marginleft15">
+                      <div class="text-body-regular color-dark">SPO2</div>
+                      <div class="custom-card-title color-dark">97</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">PT INR Test (05, July, 2020 8:00 am)</div>
+                <div class="margintop20">
+                  <div class="text-body-regular color-dark">INR</div>
+                  <div class="display-flex">
+                    <img class="image15 margintop10 marginright5" src="images/clinical/arrow-up.png" alt="up arrow icon">
+                    <div class="custom-card-title color-red">3.58</div>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Symptoms</div>
+                <div class="margintop20">
+                  <div class="display-flex text-body-regular color-dark symptoms">
+                    <li>Fatigue</li>
+                    <li>Headache</li>
+                    <li>Pain</li>
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
+                <div class="margintop10">
+                  <div class="display-flex">
+                    <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
+                    <div class="marginleft15">
+                      <div class="custom-card-title color-dark">22, July 2020</div>
+                      <div class="text-body-regular color-dark">11:30 am  45 min</div>
+                    </div>
+                    <div class=" marginleft15 text-body-regular color-dark">11 more days left</div>    
+                  </div>
+                </div>
+              </div>
+              <div class="margintop30">
+                <div class="text-body color-dark border-bottom-gray">Adherence</div>
+                <div class="margintop20">
+                  <div class="display-flex">
+                    <div class="paddingtop10p"><img class="image2417" src="images/clinical/missing-alert.png" alt="alert icon"></div>    
+                    <div class="text-body-regular color-dark marginleft15">
+                      <li>You missed <span class="color-red">2 Medications</span> last week</li>
+                      <li>Higher INR, revisit medications</li>
+                    </div>
+                  </div>
+                </div>
+              </div>
             </div>
           </div>
         </div>

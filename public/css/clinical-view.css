@@ -1,3 +1,128 @@
+.display-flex {
+    display: flex;
+}
+
+.bg-gray {
+    background: #f7f9fa;
+}
+
+.bg-image-red {
+    background-image: url(../images/clinical/card-red.png);
+    background-position: 0 -2%;
+    background-repeat: no-repeat;
+}
+
+.bg-image-orange {
+    background-image: url(../images/clinical/card-orange.png);
+    background-position: 0 -2%;
+    background-repeat: no-repeat;
+}
+
+.bg-image-green {
+    background-image: url(../images/clinical/card-green.png);
+    background-position: 0 -2%;
+    background-repeat: no-repeat;
+}
+
+.border-red {
+    border: 0 !important;
+    border-top: 4px solid #e43535 !important;
+}
+
+.border-orange {
+    border: 0 !important;
+    border-top: 4px solid #ff903d !important;
+}
+
+.border-green {
+    border: 0 !important;
+    border-top: 4px solid #28c96d !important;
+}
+
+.padding20 {
+    padding: 20px;
+}
+
+.paddingtop10p {
+    padding-top: 10%;
+}
+
+.paddingtop5 {
+    padding-top: 5px;
+}
+
+.margin1020 {
+    margin: 10px 20px 0 0;
+}
+
+.marginleft5 {
+    margin-left: 5px;
+}
+
+.marginleft15 {
+    margin-left: 15px;
+}
+
+.margintop30 {
+    margin-top: 30px;
+}
+
+.margintop20 {
+    margin-top: 20px;
+}
+
+.margintop15 {
+    margin-top: 15px;
+}
+
+.margintop10 {
+    margin-top: 10px;
+}
+
+.margintop5 {
+    margin-top: 5px;
+}
+
+.marginright5 {
+    margin-right: 5px;
+}
+
+.width100 {
+    width: 100%;
+}
+
+.width25 {
+    width: 25%;
+}
+
+.width50 {
+    width: 50%;
+}
+
+.image24 {
+    height: 24px;
+    width: 24px;
+}
+
+.image15 {
+    height: 15px;
+    width: 12px;
+}
+
+.image2417 {
+    height: 17px;
+    width: 24px;
+}
+
+.symptoms li {
+    margin-right: 20px;
+}
+
+.symptoms li:before {
+    margin-right: -10px;
+    content: "";
+}
+
 .right-75px {
     right: 75px !important;
 }
@@ -63,8 +188,8 @@
 }
 
 .user-profile-icon {
-    height: 30px;
-    width: 30px;
+    height: 35px;
+    width: 35px;
 }
 
 .user-name {
@@ -159,6 +284,48 @@
 }
 
 /* Cards */
+
+.custom-card-title {
+    font-family: "Open Sans";
+    font-size: 18pt;
+    font-weight: 600 !important;
+}
+
+.custom-card-subtitle {
+    font-family: "Open Sans";
+    font-size: 16pt;
+    font-weight: 600 !important;
+}
+
+.text-body {
+    font-family: "Open Sans";
+    font-size: 14pt;
+    font-weight: 600 !important;
+}
+
+.text-body-regular {
+    font-family: "Open Sans";
+    font-size: 14pt;
+}
+
+.border-bottom-gray {
+    padding-bottom: 12px;
+    border-bottom: 1px solid #dddddd;
+}
+
+.color-blue {
+    color: #0051bf;
+}
+
+.color-dark {
+    color: #424242;
+}
+
+.color-red {
+    color: #e43535;
+}
+
+
 
 .cards-row {
     display: flex;
