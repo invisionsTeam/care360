@@ -13,7 +13,7 @@ $(document).ready(function () {
         getFavorites();
     });
 
-    $(document).on('click', '.link-survey, .survey-ques-2 .survey-btn-group .btn-submit', function () {
+    $(document).on('click', '.link-survey, .survey-ques-2 .survey-btn-group .btn-submit, .survey-ques-1 .survey-btn-group .btn-cancel', function () {
         $("main").load("/html/survey.html");
         $("#breadcrumbs").show();
         $(".link-bc-last").hide();

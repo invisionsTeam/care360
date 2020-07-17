@@ -6,16 +6,6 @@ $(document).on('click', '.survey-ques-1 input', function () {
     $(".status-text .ques-answered").text("1");
 });
 
-$(document).on('click', '.survey-ques-1 .survey-btn-group .btn-cancel', function () {
-    $(".survey-ques-1 .survey-btn-group .btn-next").prop("disabled", true);
-    $(".progress .progress-bar").addClass("progress-width-0");
-    $(".progress .progress-bar").css("width", "0%");
-    $(".progress .progress-bar span").text("0%");
-    $(".status-text .ques-answered").text("0");
-    $('.survey-ques-1 input[name="optradio"]').prop('checked', false);
-    $('.survey-ques-2 input[name="optradio2"]').prop('checked', false);
-});
-
 $(document).on('click', '.survey-ques-1 .survey-btn-group .btn-next', function () {
     $(".survey-q-1").hide();
     $(".survey-q-2").css("display", "flex");
