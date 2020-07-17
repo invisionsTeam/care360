@@ -69,7 +69,7 @@ function getMedicationByTime(calendarInput) {
                             '<div class="col-7 col-sm-6 info"><h6>' + value.name + ' ' + value.dose + '</h6>' +
                             '<p>' + value.frequency + mediNotes + '</p></div>' +
                             '<div class="col-4 col-sm-4 action"><div class="align-center">' +
-                            '<span class="notify"></span><span class="alert-me"></span></div></div></div></div>';
+                            '<span id=notify-' + value.name + ' ' + ' class="notify"></span>' + '<span id=alert-' + value.name + ' class="alert-me"></span>' + '</div></div></div></div>';
                         notificationCount = notificationCount + 1;
                     }
                 }
@@ -79,8 +79,8 @@ function getMedicationByTime(calendarInput) {
                     '<div class="col-2 col-sm-2 alert"><div class="blue-alert bg-primary"><div class="notify-medication">' +
                     '<img src="../images/schedule/snooze-white.svg" width="15" alt="medication"/><span class="notify-count">' +
                     notificationCount + '</span></div></div></div><div class="col-6 col-sm-6 info"><p>Your ' + closestTime + ' medications are due.</p></div>' +
-                    '<div class="col-4 col-sm-4 action"><div class="align-center"><span class="notifyAll"><br><p>ALL</p></span>' +
-                    '<span class="checkAll"><br><p>ALL</p></span></div></div></div></div>' + mediList;
+                    '<div class="col-4 col-sm-4 action"><div class="align-center"><span id="notify-all" class="notifyAll"><br><p>ALL</p></span>' +
+                    '<span id="check-all" class="checkAll"><br><p>ALL</p></span></div></div></div></div>' + mediList;
             }
             $(".cardContent").html(mediSchedule);
         }

@@ -134,7 +134,10 @@ $(document).ready(function () {
 
     $(document).on('click', '.showCardContent', function () {
         $(this).toggleClass("mb-0");
-        $(this).next(".cardContent").slideToggle();
+        $(this).next(".cardContent").slideToggle(200);
+        setTimeout(() => {
+            notificationCheck.get();
+        }, 200);
     });
 
     favoritesCheck.get();
@@ -145,6 +148,7 @@ $(document).ready(function () {
 
     $('a.logout').click(function () {
         sessionStorage.removeItem('favorites');
+        sessionStorage.removeItem('notifications');
     });
 
     $(document).on('click', '.notify', function () {
@@ -165,6 +169,7 @@ $(document).ready(function () {
             $(".bell-counter").css("padding", "0 6px");
         }
         $(".bell-counter").text(notifyCount);
+        notificationCheck.set();
     });
 
     $(document).on('click', '.alert-me', function () {
@@ -174,6 +179,7 @@ $(document).ready(function () {
                 $(this).parents(".collapse, .cardContent").find(".checkAll").toggleClass("active");
             }
         }
+        notificationCheck.set();
     });
 
     $(document).on('click', '.notifyAll', function () {
@@ -197,6 +203,7 @@ $(document).ready(function () {
             $(".bell-counter").css("padding", "0 6px")
         }
         $(".bell-counter").text(notifyCount);
+        notificationCheck.set();
     });
 
     $(document).on('click', '.checkAll', function () {
@@ -205,6 +212,7 @@ $(document).ready(function () {
         $(this).parents(".collapse, .cardContent").find(".alert-me").each(function () {
             selectAll($(this), that);
         });
+        notificationCheck.set();
     });
 
     function selectAll(self, that) {
@@ -243,6 +251,50 @@ function populateUserName() {
 function getCookieValue(a) {
     var b = document.cookie.match('(^|;)\\s*' + a + '\\s*=\\s*([^;]+)');
     return b ? b.pop() : '';
+}
+
+var notificationCheck = {
+    set: function () {
+        var notifications = [];
+        sessionStorage.removeItem('notifications');
+        $('.cardContent .card-body:not(.med-alert-info)').each(function () {
+            var notifyID = $(this).find('.action span.notify').attr('id'),
+                notifyVal = $(this).find('.action span.notify').hasClass('active'),
+                checkID = $(this).find('.action span.alert-me').attr('id'),
+                checkVal = $(this).find('.action span.alert-me').hasClass('active');
+            notifications.push({ id: notifyID, value: notifyVal });
+            notifications.push({ id: checkID, value: checkVal });
+        });
+        $('.cardContent .card-body.med-alert-info').each(function () {
+            notifications.push({ id: $(this).find('.action span.notifyAll').attr('id'), value: $(this).find('.action span.notifyAll').hasClass('active') });
+            notifications.push({ id: $(this).find('.action span.checkAll').attr('id'), value: $(this).find('.action span.checkAll').hasClass('active') });
+        });
+        sessionStorage.notifications = JSON.stringify(notifications);
+    },
+    get: function () {
+        if (sessionStorage.notifications != undefined) {
+            // Get the existing values out of sessionStorage
+            notifications = JSON.parse(sessionStorage.notifications);
+            for (var i = 0; i < notifications.length; i++) {
+                $('.cardContent .card-body:not(.med-alert-info)').each(function () {
+                    if ($(this).find('.action span.notify').attr('id') === notifications[i].id && notifications[i].value) {
+                        $('#' + notifications[i].id).addClass('active');
+                    }
+                    if ($(this).find('.action span.alert-me').attr('id') === notifications[i].id && notifications[i].value) {
+                        $('#' + notifications[i].id).addClass('active');
+                    }
+                });
+                $('.cardContent .card-body.med-alert-info').each(function () {
+                    if ($(this).find('.action span.notifyAll').attr('id') === notifications[i].id && notifications[i].value) {
+                        $('#' + notifications[i].id).addClass('active');
+                    }
+                    if ($(this).find('.action span.checkAll').attr('id') === notifications[i].id && notifications[i].value) {
+                        $('#' + notifications[i].id).addClass('active');
+                    }
+                });
+            }
+        }
+    }
 }
 
 var favoritesCheck = {
