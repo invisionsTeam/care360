@@ -8,43 +8,43 @@
 
 .bg-image-red {
     background-image: url(../images/clinical/card-red.png);
-    background-position: 0 -2%;
+    background-position: 0 -2px;
     background-repeat: no-repeat;
 }
 
 .bg-image-orange {
     background-image: url(../images/clinical/card-orange.png);
-    background-position: 0 -2%;
+    background-position: 0 -2px;
     background-repeat: no-repeat;
 }
 
 .bg-image-green {
     background-image: url(../images/clinical/card-green.png);
-    background-position: 0 -2%;
+    background-position: 0 -2px;
     background-repeat: no-repeat;
 }
 
 .border-red {
     border: 0 !important;
-    border-top: 4px solid #e43535 !important;
+    border-top: 5px solid #e43535 !important;
 }
 
 .border-orange {
     border: 0 !important;
-    border-top: 4px solid #ff903d !important;
+    border-top: 5px solid #ff903d !important;
 }
 
 .border-green {
     border: 0 !important;
-    border-top: 4px solid #28c96d !important;
+    border-top: 5px solid #28c96d !important;
 }
 
 .padding20 {
     padding: 20px;
 }
 
-.paddingtop10p {
-    padding-top: 10%;
+.paddingtop10 {
+    padding-top: 10px;
 }
 
 .paddingtop5 {
@@ -287,25 +287,25 @@
 
 .custom-card-title {
     font-family: "Open Sans";
-    font-size: 18pt;
+    font-size: 18px;
     font-weight: 600 !important;
 }
 
 .custom-card-subtitle {
     font-family: "Open Sans";
-    font-size: 16pt;
+    font-size: 16px;
     font-weight: 600 !important;
 }
 
 .text-body {
     font-family: "Open Sans";
-    font-size: 14pt;
+    font-size: 14px;
     font-weight: 600 !important;
 }
 
 .text-body-regular {
     font-family: "Open Sans";
-    font-size: 14pt;
+    font-size: 14px;
 }
 
 .border-bottom-gray {
