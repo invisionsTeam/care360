@@ -132,11 +132,42 @@
 }
 
 .custom-blue {
-    background-color: #0051BF !important;
+    background-color: #123e95 !important;
+}
+
+.navbar.navbar90px {
+   min-height: 90px;   
+}
+
+.navbar.navbar-border-none {
+    margin-bottom: 0;
 }
 
 .header-logo-span {
-    margin: auto 100px;
+    font-family: "Open Sans";
+    font-size: 16px;
+    color: #FFFFFF;
+    margin: auto 135px;
+}
+
+.header-logo-span .navbar-brand {
+    float: none;
+}
+
+.header-logo-span .navbar-brand.navbar-brand-logo {
+    font-family: "Open Sans";
+    font-weight: 400;
+    font-size: 18px;
+    color: #424242;
+    background-color: #b8e1ff;
+    height: 34px;
+    padding: 6px 15px;
+    margin-right: 66px;
+}
+
+.header-logo-span .navbar-brand.navbar-brand-dashboard {
+    /* border-bottom: 8px solid #28c96d; */
+    padding: 15px 0 30px 0;
 }
 
 .navbar-right {
@@ -163,6 +194,18 @@
     margin: auto 10px;
 }
 
+.email-icon {
+    width: 42px;
+    height: 24px;
+    margin-right: 15px;
+}
+
+.notification-icon {
+    width: 36px;
+    height: 29px;
+    margin-right: 15px;
+}
+
 .bell {
     margin-right: 5px;
     cursor: pointer;
@@ -171,20 +214,22 @@
 .bell-counter {
     position: relative;
     top: -10px;
-    left: -16px;
+    left: -34px;
     padding: 2px;
     border-radius: 50%;
     background: white;
-    color: #0051bf;
-    font-size: 10px;
+    color: #123e95;
+    font-size: 11px;
     font-family: "Roboto";
+    font-weight: 600;
 }
 
  header .full-width-divider .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover {
-    border-bottom: 5px solid #0051BF;
+    border-bottom: 8px solid #123e95;
     border-left: none;
     border-right: none;
     border-top: none;
+    border-color: none;
 }
 
 .user-profile-icon {
@@ -195,17 +240,24 @@
 .user-name {
     color: #ffffff;
     font-size: 14px;
-    font-family: 'Roboto', sans-serif;
+    font-family: "Open Sans";
     font-weight: 500;
     margin-top: 5px;
 }
 
 .container-background {
-    background-color: #e4f1fd;
+    background-color: #f1f3f6;
 }
 
 .tab-panel a {
     color: #333;
+}
+
+.tab-panel-count {
+    text-align: center;
+    padding: 10px 0;
+    font-family: "Open Sans";
+    font-size: 18px;
 }
 
 .full-width-divider:after {
@@ -213,7 +265,7 @@
     position: absolute;
     left: 0;
     width: 100%;
-    border-bottom: 1px solid #dddddd;
+    border-bottom: 1px solid #cfcfcf;
 }
 
 .full-width-divider .nav-tabs {
@@ -222,19 +274,23 @@
 
 .full-width-divider .nav-tabs li {
     margin-bottom: 0;
+    color: #424242;
+    font-size: 16px;
+    font-family: "Open Sans";
 }
 
 .full-width-divider .nav-tabs>li>a {
     margin-right: 0;
     line-height: 1.42857143; 
-    border: none; 
+    border: none;
+    padding: 10px 0;
 }
 .nav>li>a:hover {
     background-color: #fff;
 }
 
 .nav-tabs.nav-tabs-margin {
-    margin: auto 235px;
+    margin: auto 120px;
 }
 
 .nav-tabs .tab-panel-margin {
@@ -246,14 +302,24 @@
     margin: 50px auto;
 }
 
+.tab-content .custom-tab-pane {
+    font-family: "Open Sans";
+}
+
 .my-patients {
     width: 50%;
     margin-right: 30px;
 }
 
+.search-icon {
+    position: relative;
+    height: 20px;
+    width: 20px;
+}
+
 .risk-patients-tabs {
     background: #fff;
-    border: 1px solid #0051BF;
+    border: 1px solid #123e95;
 }
 
 .risk-patients-tabs .nav-tabs>li>a {
@@ -265,11 +331,11 @@
 } */
 
 .risk-patients-tabs .tab-panel:not(:last-child) {
-    border-right: 1px solid #0051BF;
+    border-right: 1px solid #123e95;
 }
 
 .risk-patients-tabs .risk-tabs.nav-tabs>li.active>a {
-    background-color: #0051BF;
+    background-color: #123e95;
     color: #fff;
 }
 
@@ -314,7 +380,7 @@
 }
 
 .color-blue {
-    color: #0051bf;
+    color: #123e95;
 }
 
 .color-dark {
@@ -343,3 +409,21 @@
     margin: 15px auto;
     box-shadow: none;
 }
+
+/* FOOTER */
+
+.clinical-footer {
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #3e3e3f;
+    font-family: "Open Sans";
+    font-size: 16px;
+    color: white;
+    margin: 50px auto;
+ }
+
+ .clinical-footer p {
+     padding: 30px 90px;
+ }

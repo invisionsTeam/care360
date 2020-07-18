@@ -30,14 +30,16 @@
 
   <header>
 
-    <nav class="navbar fixed-top navbar-expand-lg navbar-dark custom-blue scrolling-navbar no-border-radius">
-      <span class="header-logo-span"><a class="navbar-brand" href="#"><strong>LOGO</strong></a>
-        <a class="navbar-brand" href="#"><strong>Dashboard</strong></a></span>
+    <nav class="navbar navbar90px navbar-border-none fixed-top navbar-expand-lg navbar-dark custom-blue scrolling-navbar no-border-radius">
+      <span class="header-logo-span"><a class="navbar-brand navbar-brand-logo" href="#"><strong>LOGO</strong></a>
+        <a class="navbar-brand navbar-brand-dashboard" href="#"><strong>Dashboard</strong></a></span>
       <span class="navbar-right text-white right-75px">
-        <span class="bell"><i class="fa fa-envelope" aria-hidden="true"></i>
+        <span><a class="email-image" href="#"><img class="email-icon" src="images/clinical/email.svg"
+          alt="user profile icon"></a>
           <span class="bell-counter">06</span></span>
-        <span class="bell"><i class="fa fa-bell-o" aria-hidden="true"></i>
-          <span class="bell-counter">12</span></span>
+          <span><a class="notification-image" href="#"><img class="notification-icon" src="images/clinical/notification.svg"
+            alt="user profile icon"></a>
+            <span class="bell-counter">12</span></span>
         <span><a class="profile-image" href="#"><img class="user-profile-icon" src="images/profile-pic.svg"
               alt="user profile icon"></a>
           <span class="user-name">Firstname Lastname</span></span>
@@ -47,11 +49,19 @@
 
     <div class="full-width-divider">
       <ul class="nav nav-tabs nav-tabs-margin">
-        <li class="active tab-panel tab-panel-margin"><a data-toggle="tab" href="#myPatients">My Patients</a></li>
-        <li class="tab-panel tab-panel-margin"><a data-toggle="tab" href="#attentionPatients">Attention Patients</a>
+        <li class="active tab-panel tab-panel-margin">
+          <div class="tab-panel-count">10</div>
+          <a data-toggle="tab" href="#myPatients">My Patients</a></li>
+        <li class="tab-panel tab-panel-margin">
+          <div class="tab-panel-count">05</div>
+          <a data-toggle="tab" href="#attentionPatients">Attention Patients</a>
         </li>
-        <li class="tab-panel tab-panel-margin"><a data-toggle="tab" href="#allPatients">All Patients</a>
-        <li class="tab-panel tab-panel-margin"><a data-toggle="tab" href="#mySitePatients">My Site Patients</a></li>
+        <li class="tab-panel tab-panel-margin">
+          <div class="tab-panel-count">35</div>
+          <a data-toggle="tab" href="#allPatients">All Patients</a>
+        <li class="tab-panel tab-panel-margin">
+          <div class="tab-panel-count">20</div>
+          <a data-toggle="tab" href="#mySitePatients">My Site Patients</a></li>
       </ul>
     </div>
 
@@ -66,6 +76,7 @@
         <div id="myPatients" class="tab-pane fade in active custom-tab-pane">
           <div class="my-patients">
             <!-- Search form -->
+            <!-- <img class="search-icon" src="images/clinical/search.svg"/> -->
             <input class="form-control my-patients-search" type="text" placeholder="Search by Patient Name or ID"
               aria-label="Search">
           </div>
@@ -641,4 +652,8 @@
     </div>
   </main>
   <!--Main Layout-->
+<!-- Footer -->
+  <!-- <div class="clinical-footer">
+    <p>© 2020 Company Name. All rights reserved </p>
+  </div> -->
 </body>
