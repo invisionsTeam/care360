@@ -30,16 +30,17 @@
 
   <header>
 
-    <nav class="navbar navbar90px navbar-border-none fixed-top navbar-expand-lg navbar-dark custom-blue scrolling-navbar no-border-radius">
+    <nav
+      class="navbar navbar90px navbar-border-none fixed-top navbar-expand-lg navbar-dark custom-blue scrolling-navbar no-border-radius">
       <span class="header-logo-span"><a class="navbar-brand navbar-brand-logo" href="#"><strong>LOGO</strong></a>
         <a class="navbar-brand navbar-brand-dashboard" href="#"><strong>Dashboard</strong></a></span>
       <span class="navbar-right text-white right-75px">
         <span><a class="email-image" href="#"><img class="email-icon" src="images/clinical/email.svg"
-          alt="user profile icon"></a>
+              alt="user profile icon"></a>
           <span class="bell-counter">06</span></span>
-          <span><a class="notification-image" href="#"><img class="notification-icon" src="images/clinical/notification.svg"
-            alt="user profile icon"></a>
-            <span class="bell-counter">12</span></span>
+        <span><a class="notification-image" href="#"><img class="notification-icon"
+              src="images/clinical/notification.svg" alt="user profile icon"></a>
+          <span class="bell-counter">12</span></span>
         <span><a class="profile-image" href="#"><img class="user-profile-icon" src="images/profile-pic.svg"
               alt="user profile icon"></a>
           <span class="user-name">Firstname Lastname</span></span>
@@ -51,7 +52,8 @@
       <ul class="nav nav-tabs nav-tabs-margin">
         <li class="active tab-panel tab-panel-margin">
           <div class="tab-panel-count">10</div>
-          <a data-toggle="tab" href="#myPatients">My Patients</a></li>
+          <a data-toggle="tab" href="#myPatients">My Patients</a>
+        </li>
         <li class="tab-panel tab-panel-margin">
           <div class="tab-panel-count">05</div>
           <a data-toggle="tab" href="#attentionPatients">Attention Patients</a>
@@ -61,7 +63,8 @@
           <a data-toggle="tab" href="#allPatients">All Patients</a>
         <li class="tab-panel tab-panel-margin">
           <div class="tab-panel-count">20</div>
-          <a data-toggle="tab" href="#mySitePatients">My Site Patients</a></li>
+          <a data-toggle="tab" href="#mySitePatients">My Site Patients</a>
+        </li>
       </ul>
     </div>
 
@@ -71,14 +74,12 @@
 
   <!--Main Layout-->
   <main class="container-background">
-    <div class="container">
+    <div class="container paddingLeft25px">
       <div class="tab-content tab-content-flex">
         <div id="myPatients" class="tab-pane fade in active custom-tab-pane">
           <div class="my-patients">
-            <!-- Search form -->
-            <!-- <img class="search-icon" src="images/clinical/search.svg"/> -->
-            <input class="form-control my-patients-search" type="text" placeholder="Search by Patient Name or ID"
-              aria-label="Search">
+            <input type="search" class="form-control my-patients-search" placeholder="Search by Patient Name or ID" />
+            <img class="search-icon" src="images/clinical/search.svg" />
           </div>
           <div class="risk-patients-tabs">
             <ul class="nav nav-tabs risk-tabs">
@@ -114,12 +115,11 @@
           <div class="custom-card card border-red">
             <div class="display-flex width100 padding20 bg-gray bg-image-red">
               <div class="margin1020 width25">
-                <a class="profile-image" href="#"><img src="images/clinical/biguser.png"
-                    alt="user profile icon"></a>
+                <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
                 <div class="custom-card-title margintop15 color-dark">Day 6</div>
               </div>
               <div>
-                <h5 class="card-title custom-card-title color-dark">Paul Johnson  49/M</h5>
+                <h5 class="card-title custom-card-title color-dark">Paul Johnson 49/M</h5>
                 <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
                 <div class="margintop20">
                   <div class="custom-card-subtitle color-blue">Coronary Artery Bypass</div>
@@ -164,7 +164,7 @@
                 </div>
               </div>
               <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Blood Sugar Level  (07, July, 2020  8:00 am)</div>
+                <div class="text-body color-dark border-bottom-gray">Blood Sugar Level (07, July, 2020 8:00 am)</div>
                 <div class="margintop20">
                   <div class="text-body-regular color-dark">Blood Sugar</div>
                   <div class="display-flex">
@@ -190,9 +190,9 @@
                     <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
                     <div class="marginleft15">
                       <div class="custom-card-title color-dark">20, July 2020</div>
-                      <div class="text-body-regular color-dark">11:30 am  45 min</div>
+                      <div class="text-body-regular color-dark">11:30 am 45 min</div>
                     </div>
-                    <div class=" marginleft15 text-body-regular color-dark">12 more days left</div>    
+                    <div class=" marginleft15 text-body-regular color-dark">12 more days left</div>
                   </div>
                 </div>
               </div>
@@ -200,7 +200,8 @@
                 <div class="text-body color-dark border-bottom-gray">Adherence</div>
                 <div class="margintop20">
                   <div class="display-flex">
-                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png" alt="alert icon"></div>    
+                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
+                        alt="alert icon"></div>
                     <div class="text-body-regular color-dark marginleft15">
                       <li>You missed <span class="color-red">2 Medications</span> last week</li>
                       <li>Unstable blood sugar</li>
@@ -214,8 +215,7 @@
           <div class="custom-card card border-red">
             <div class="display-flex width100 padding20 bg-gray bg-image-red">
               <div class="margin1020 width25">
-                <a class="profile-image" href="#"><img src="images/clinical/biguser.png"
-                    alt="user profile icon"></a>
+                <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
                 <div class="custom-card-title margintop15 color-dark">Day 9</div>
               </div>
               <div>
@@ -290,9 +290,9 @@
                     <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
                     <div class="marginleft15">
                       <div class="custom-card-title color-dark">22, July 2020</div>
-                      <div class="text-body-regular color-dark">11:30 am  45 min</div>
+                      <div class="text-body-regular color-dark">11:30 am 45 min</div>
                     </div>
-                    <div class=" marginleft15 text-body-regular color-dark">11 more days left</div>    
+                    <div class=" marginleft15 text-body-regular color-dark">11 more days left</div>
                   </div>
                 </div>
               </div>
@@ -300,7 +300,8 @@
                 <div class="text-body color-dark border-bottom-gray">Adherence</div>
                 <div class="margintop20">
                   <div class="display-flex">
-                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png" alt="alert icon"></div>    
+                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
+                        alt="alert icon"></div>
                     <div class="text-body-regular color-dark marginleft15">
                       <li>You missed <span class="color-red">3 Medications</span> last week</li>
                       <li>Higher INR, revisit medications</li>
@@ -314,8 +315,7 @@
           <div class="custom-card card border-red">
             <div class="display-flex width100 padding20 bg-gray bg-image-red">
               <div class="margin1020 width25">
-                <a class="profile-image" href="#"><img src="images/clinical/biguser.png"
-                    alt="user profile icon"></a>
+                <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
                 <div class="custom-card-title margintop15 color-dark">Day 12</div>
               </div>
               <div>
@@ -328,7 +328,7 @@
             </div>
             <div class="padding20">
               <div>
-                <div class="text-body color-dark border-bottom-gray">Blood Sugar Level  (09, July, 2020  9:00 am)</div>
+                <div class="text-body color-dark border-bottom-gray">Blood Sugar Level (09, July, 2020 9:00 am)</div>
                 <div class="margintop20">
                   <div class="text-body-regular color-dark">Blood Sugar</div>
                   <div class="display-flex">
@@ -352,9 +352,9 @@
                     <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
                     <div class="marginleft15">
                       <div class="custom-card-title color-dark">15, July 2020</div>
-                      <div class="text-body-regular color-dark">11:30 am  45 min</div>
+                      <div class="text-body-regular color-dark">11:30 am 45 min</div>
                     </div>
-                    <div class=" marginleft15 text-body-regular color-dark">7 more days left</div>    
+                    <div class=" marginleft15 text-body-regular color-dark">7 more days left</div>
                   </div>
                 </div>
               </div>
@@ -362,7 +362,8 @@
                 <div class="text-body color-dark border-bottom-gray">Adherence</div>
                 <div class="margintop20">
                   <div class="display-flex">
-                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png" alt="alert icon"></div>    
+                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
+                        alt="alert icon"></div>
                     <div class="text-body-regular color-dark marginleft15">
                       <li>You missed <span class="color-red">3 Medications</span> last week</li>
                       <li>Unstable blood sugar</li>
@@ -378,8 +379,7 @@
           <div class="custom-card card border-red">
             <div class="display-flex width100 padding20 bg-gray bg-image-red">
               <div class="margin1020 width25">
-                <a class="profile-image" href="#"><img src="images/clinical/biguser.png"
-                    alt="user profile icon"></a>
+                <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
                 <div class="custom-card-title margintop15 color-dark">Day 7</div>
               </div>
               <div>
@@ -427,9 +427,9 @@
                     <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
                     <div class="marginleft15">
                       <div class="custom-card-title color-dark">20, July 2020</div>
-                      <div class="text-body-regular color-dark">11:30 am  45 min</div>
+                      <div class="text-body-regular color-dark">11:30 am 45 min</div>
                     </div>
-                    <div class=" marginleft15 text-body-regular color-dark">12 more days left</div>    
+                    <div class=" marginleft15 text-body-regular color-dark">12 more days left</div>
                   </div>
                 </div>
               </div>
@@ -437,7 +437,8 @@
                 <div class="text-body color-dark border-bottom-gray">Adherence</div>
                 <div class="margintop20">
                   <div class="display-flex">
-                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png" alt="alert icon"></div>    
+                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
+                        alt="alert icon"></div>
                     <div class="text-body-regular color-dark marginleft15">
                       <li>You missed <span class="color-red">4 Medications</span> last week</li>
                       <li>Unstable blood sugar</li>
@@ -451,12 +452,11 @@
           <div class="custom-card card border-orange">
             <div class="display-flex width100 padding20 bg-gray bg-image-orange">
               <div class="margin1020 width25">
-                <a class="profile-image" href="#"><img src="images/clinical/biguser.png"
-                    alt="user profile icon"></a>
+                <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
                 <div class="custom-card-title margintop15 color-dark">Day 9</div>
               </div>
               <div>
-                <h5 class="card-title custom-card-title color-dark">John Steve  43/M</h5>
+                <h5 class="card-title custom-card-title color-dark">John Steve 43/M</h5>
                 <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
                 <div class="margintop20">
                   <div class="custom-card-subtitle color-blue">Mitral Valve Replacement</div>
@@ -527,9 +527,9 @@
                     <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
                     <div class="marginleft15">
                       <div class="custom-card-title color-dark">22, July 2020</div>
-                      <div class="text-body-regular color-dark">11:30 am  45 min</div>
+                      <div class="text-body-regular color-dark">11:30 am 45 min</div>
                     </div>
-                    <div class=" marginleft15 text-body-regular color-dark">11 more days left</div>    
+                    <div class=" marginleft15 text-body-regular color-dark">11 more days left</div>
                   </div>
                 </div>
               </div>
@@ -537,7 +537,8 @@
                 <div class="text-body color-dark border-bottom-gray">Adherence</div>
                 <div class="margintop20">
                   <div class="display-flex">
-                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png" alt="alert icon"></div>    
+                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
+                        alt="alert icon"></div>
                     <div class="text-body-regular color-dark marginleft15">
                       <li>You missed <span class="color-red">2 Medications</span> last week</li>
                       <li>Higher INR, revisit medications</li>
@@ -551,12 +552,11 @@
           <div class="custom-card card border-green">
             <div class="display-flex width100 padding20 bg-gray bg-image-green">
               <div class="margin1020 width25">
-                <a class="profile-image" href="#"><img src="images/clinical/biguser.png"
-                    alt="user profile icon"></a>
+                <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
                 <div class="custom-card-title margintop15 color-dark">Day 12</div>
               </div>
               <div>
-                <h5 class="card-title custom-card-title color-dark">Julie John  38/F</h5>
+                <h5 class="card-title custom-card-title color-dark">Julie John 38/F</h5>
                 <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
                 <div class="margintop20">
                   <div class="custom-card-subtitle color-blue">Mitral Valve Replacement</div>
@@ -627,9 +627,9 @@
                     <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
                     <div class="marginleft15">
                       <div class="custom-card-title color-dark">22, July 2020</div>
-                      <div class="text-body-regular color-dark">11:30 am  45 min</div>
+                      <div class="text-body-regular color-dark">11:30 am 45 min</div>
                     </div>
-                    <div class=" marginleft15 text-body-regular color-dark">11 more days left</div>    
+                    <div class=" marginleft15 text-body-regular color-dark">11 more days left</div>
                   </div>
                 </div>
               </div>
@@ -637,7 +637,8 @@
                 <div class="text-body color-dark border-bottom-gray">Adherence</div>
                 <div class="margintop20">
                   <div class="display-flex">
-                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png" alt="alert icon"></div>    
+                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
+                        alt="alert icon"></div>
                     <div class="text-body-regular color-dark marginleft15">
                       <li>You missed <span class="color-red">2 Medications</span> last week</li>
                       <li>Higher INR, revisit medications</li>
@@ -652,7 +653,7 @@
     </div>
   </main>
   <!--Main Layout-->
-<!-- Footer -->
+  <!-- Footer -->
   <!-- <div class="clinical-footer">
     <p>© 2020 Company Name. All rights reserved </p>
   </div> -->

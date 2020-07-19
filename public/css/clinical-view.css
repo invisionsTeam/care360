@@ -135,6 +135,10 @@
     background-color: #123e95 !important;
 }
 
+.paddingLeft25px.container {
+    padding-left: 25px;
+}
+
 .navbar.navbar90px {
    min-height: 90px;   
 }
@@ -148,6 +152,7 @@
     font-size: 16px;
     color: #FFFFFF;
     margin: auto 135px;
+    padding: 0 30px;
 }
 
 .header-logo-span .navbar-brand {
@@ -232,6 +237,11 @@
     border-color: none;
 }
 
+header .full-width-divider .nav-tabs>li>a:hover {
+    border-color: #fff;
+    background-color: #fff;
+}
+
 .user-profile-icon {
     height: 35px;
     width: 35px;
@@ -291,6 +301,7 @@
 
 .nav-tabs.nav-tabs-margin {
     margin: auto 120px;
+    padding: 0 30px;
 }
 
 .nav-tabs .tab-panel-margin {
@@ -307,14 +318,26 @@
 }
 
 .my-patients {
-    width: 50%;
     margin-right: 30px;
 }
 
+.my-patients-search.form-control {
+    display: inline-block; 
+    width: 570px; 
+    background: #fff;  
+    outline: none;
+    font-size: 14px; 
+    padding: 0 35px; 
+    vertical-align: middle;
+}
+
 .search-icon {
-    position: relative;
+    position: relative; 
+    right: 565px;
+    width: 20px; 
     height: 20px;
-    width: 20px;
+    vertical-align: middle; 
+    cursor: pointer;
 }
 
 .risk-patients-tabs {
@@ -340,7 +363,7 @@
 }
 
 .nav.risk-tabs li a {
-    padding: 6px 36px;
+    padding: 6px 30px;
 }
 
 .custom-tab-pane .risk-patients-tabs .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover, .nav-tabs>li>a:hover {
@@ -390,8 +413,6 @@
 .color-red {
     color: #e43535;
 }
-
-
 
 .cards-row {
     display: flex;
