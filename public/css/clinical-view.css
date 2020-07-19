@@ -434,7 +434,7 @@ header .full-width-divider .nav-tabs>li>a:hover {
 /* FOOTER */
 
 .clinical-footer {
-    position: fixed;
+    position: relative;
     left: 0;
     bottom: 0;
     width: 100%;
@@ -442,9 +442,9 @@ header .full-width-divider .nav-tabs>li>a:hover {
     font-family: "Open Sans";
     font-size: 16px;
     color: white;
-    margin: 50px auto;
  }
 
  .clinical-footer p {
-     padding: 30px 90px;
+     padding: 50px 90px;
+     margin: auto 80px;
  }
