@@ -345,6 +345,7 @@ header .full-width-divider .nav-tabs>li>a:hover {
 .my-patients-search.form-control {
     display: inline-block; 
     width: 570px; 
+    height: 41px;
     background: #fff;  
     outline: none;
     font-size: 14px; 
@@ -386,7 +387,8 @@ header .full-width-divider .nav-tabs>li>a:hover {
 }
 
 .nav.risk-tabs li a {
-    padding: 6px 30px;
+    width: 115px;
+    text-align: center;
 }
 
 .custom-tab-pane .risk-patients-tabs .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover, .nav-tabs>li>a:hover {
@@ -485,10 +487,6 @@ header .full-width-divider .nav-tabs>li>a:hover {
     .risk-patients-tabs {
         margin: 20px 0;
         width: fit-content;
-    }
-
-    .nav.risk-tabs li a {
-        padding: 6px 44px;
     }
 
     .width-768px.container {
