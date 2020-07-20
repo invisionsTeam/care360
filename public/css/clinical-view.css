@@ -153,6 +153,7 @@
     color: #FFFFFF;
     margin: auto 135px;
     padding: 0 30px;
+    position: absolute;
 }
 
 .header-logo-span .navbar-brand {
@@ -346,6 +347,7 @@ header .full-width-divider .nav-tabs>li>a:hover {
 
 .risk-patients-tabs .nav-tabs>li>a {
     border: none;
+    margin-right: 0;
 }
 
 /* .risk-patients-tabs .risk-tabs.nav-tabs>li {
@@ -446,4 +448,38 @@ header .full-width-divider .nav-tabs>li>a:hover {
  .clinical-footer p {
      padding: 50px 90px;
      margin: auto 80px;
+ }
+
+ @media only screen and (max-width: 1024px) and (min-width: 768px) {
+
+    .tab-content .custom-tab-pane.active {
+        display: block;
+    }
+
+    .my-patients {
+        margin: 20px 0;
+    }
+
+    .risk-patients-tabs {
+        margin: 20px 0;
+        width: fit-content;
+    }
+
+    .nav.risk-tabs li a {
+        padding: 6px 44px;
+    }
+
+    .width-768px.container {
+        max-width: 950px;
+        width: 950px;
+    }
+
+    .custom-card.card {
+        margin: 15px;
+    }
+
+    .paddingLeft45px.container {
+        padding-left: 45px;
+    }
+
  }
