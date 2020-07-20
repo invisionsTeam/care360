@@ -343,6 +343,7 @@ header .full-width-divider .nav-tabs>li>a:hover {
 .risk-patients-tabs {
     background: #fff;
     border: 1px solid #123e95;
+    border-radius: 4px;
 }
 
 .risk-patients-tabs .nav-tabs>li>a {
@@ -482,4 +483,26 @@ header .full-width-divider .nav-tabs>li>a:hover {
         padding-left: 45px;
     }
 
+ }
+
+ /* Transition */
+
+ .my-patients-search.form-control {
+     transition: none;
+     -webkit-transition: none;
+ }
+
+ .navbar-transition.navbar.scrolling-navbar {
+    transition: none;
+    -webkit-transition: none;
+ }
+
+ .navbar-transition.navbar.scrolling-navbar a {
+    transition: none;
+    -webkit-transition: none;
+ }
+
+ .full-width-divider .nav-tabs>li>a {
+    transition: none;
+    -webkit-transition: none;
  }
