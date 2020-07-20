@@ -39,8 +39,16 @@
     border-top: 5px solid #28c96d !important;
 }
 
+.min-height-cards {
+    min-height: 155px;
+}
+
 .padding20 {
     padding: 20px;
+}
+
+.paddingleft10 {
+    padding-left: 10px;
 }
 
 .paddingtop10 {
@@ -217,15 +225,28 @@
     cursor: pointer;
 }
 
-.bell-counter {
+.bell-counter-single {
     position: relative;
     top: -10px;
     left: -34px;
-    padding: 2px;
+    padding: 2px 6px;
     border-radius: 50%;
     background: white;
     color: #123e95;
-    font-size: 11px;
+    font-size: 13px;
+    font-family: "Roboto";
+    font-weight: 600;
+}
+
+.bell-counter {
+    position: relative;
+    top: -10px;
+    left: -37px;
+    padding: 2px 3px;
+    border-radius: 50%;
+    background: white;
+    color: #123e95;
+    font-size: 13px;
     font-family: "Roboto";
     font-weight: 600;
 }
