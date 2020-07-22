@@ -507,7 +507,7 @@ header .full-width-divider .nav-tabs>li>a:hover {
 	.paddingLeft45px.container {
 		padding-left: 45px;
     }
-    .custom-card.card.col-md-6 {
+    .custom-card.card.col-sm-6 {
 		flex: 0 0 46% !important;
 		max-width: 50%;
     }
@@ -515,8 +515,8 @@ header .full-width-divider .nav-tabs>li>a:hover {
 
 /* Large Desktop */
 
-@media only screen and (min-width: 1200px) {
-	.custom-card.card.col-lg-4 {
+@media only screen and (min-width: 992px) {
+	.custom-card.card.col-md-4 {
 		max-width: 31.33333333%;
 	}
 }
