@@ -3,17 +3,6 @@ window.location.href.indexOf("medication-schedule") > -1 ? $('#calendarCarousel'
 }) : false;
 
 $(document).ready(function () {
-
-    $(document).on('click', '#calendarCarousel li', function () {
-        $("#calendarCarousel li").removeClass("active");
-        $(this).addClass("active");
-        var selectedDate = $(this).data().date;
-        selectedDate === undefined ? selectedDate = "first-june" : $(this).data().date;
-      /*  $(".schAccordion").each(function () {
-            selectedDate === $(this).data().subscription ? $(this).show() : $(this).hide();
-        }) */
-    });
-
     $(document).on('click', '.toggelSchMed input', function () {
         if ($(this).data().val === "medication") {
             $("#scheduleWrap").fadeOut("fast");
@@ -25,5 +14,4 @@ $(document).ready(function () {
             $("#scheduleWrap").fadeIn("fast");
         }
     });
-
 });

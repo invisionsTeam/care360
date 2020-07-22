@@ -149,6 +149,7 @@ $(document).ready(function () {
     $('a.logout').click(function () {
         sessionStorage.removeItem('favorites');
         sessionStorage.removeItem('notifications');
+        sessionStorage.removeItem('medicationNotifications');
     });
 
     $(document).on('click', '.notify', function () {
@@ -227,6 +228,7 @@ $(document).ready(function () {
 });
 
 var favorites = [];
+var medicationNotifications = [];
 
 function populateUserName() {
     var email = getCookieValue("user");
@@ -321,8 +323,86 @@ function getFavorites() {
     }, 100);
 }
 
+var medicationNotify = {
+    set: function () {
+        //  sessionStorage.removeItem('medicationNotifications');
+        $('#scheduleAccordion .card-body:not(.mb-1)').each(function () {
+            var notifyID = $(this).find('.action span.notify').attr('id'),
+                notifyVal = $(this).find('.action span.notify').hasClass('active'),
+                checkID = $(this).find('.action span.alert-me').attr('id'),
+                checkVal = $(this).find('.action span.alert-me').hasClass('active');
+            var notifyIndex = medicationNotifications.indexOf(notifyID);
+            if (notifyVal) {
+                if (notifyIndex == -1)
+                    medicationNotifications.push(notifyID);
+            } else {
+                if (notifyIndex > -1)
+                    medicationNotifications.splice(notifyIndex, 1);
+            }
+            var checkIndex = medicationNotifications.indexOf(checkID);
+            if (checkVal) {
+                if (checkIndex == -1)
+                    medicationNotifications.push(checkID);
+            } else {
+                if (checkIndex > -1)
+                    medicationNotifications.splice(checkIndex, 1);
+            }
+        });
+        $('#scheduleAccordion .card-body.mb-1').each(function () {
+            var notifyAllID = $(this).find('.action span.notifyAll').attr('id'),
+                notifyAllVal = $(this).find('.action span.notifyAll').hasClass('active'),
+                checkAllID = $(this).find('.action span.checkAll').attr('id'),
+                checkAllVal = $(this).find('.action span.checkAll').hasClass('active');
+            var notifyAllIndex = medicationNotifications.indexOf(notifyAllID);
+            if (notifyAllVal) {
+                if (notifyAllIndex == -1)
+                    medicationNotifications.push(notifyAllID);
+            } else {
+                if (notifyAllIndex > -1)
+                    medicationNotifications.splice(notifyAllIndex, 1);
+            }
+            var checkAllIndex = medicationNotifications.indexOf(checkAllID);
+            if (checkAllVal) {
+                if (checkAllIndex == -1)
+                    medicationNotifications.push(checkAllID);
+            } else {
+                if (checkAllIndex > -1)
+                    medicationNotifications.splice(checkAllIndex, 1);
+            }
+        });
+        sessionStorage.medicationNotifications = JSON.stringify(medicationNotifications);
+    },
+    get: function () {
+        if (sessionStorage.medicationNotifications != undefined) {
+            // Get the existing values out of sessionStorage
+            medicationNotifications = JSON.parse(sessionStorage.medicationNotifications);
+            for (var i = 0; i < medicationNotifications.length; i++) {
+                $('#scheduleAccordion .card-body:not(.mb-1)').each(function () {
+                    if ($(this).find('.action span.notify').attr('id') === medicationNotifications[i]) {
+                        $('#' + medicationNotifications[i]).addClass('active');
+                    }
+                    if ($(this).find('.action span.alert-me').attr('id') === medicationNotifications[i]) {
+                        $('#' + medicationNotifications[i]).addClass('active');
+                    }
+                });
+                $('#scheduleAccordion .card-body.mb-1').each(function () {
+                    if ($(this).find('.action span.notifyAll').attr('id') === medicationNotifications[i]) {
+                        $('#' + medicationNotifications[i]).addClass('active');
+                    }
+                    if ($(this).find('.action span.checkAll').attr('id') === medicationNotifications[i]) {
+                        $('#' + medicationNotifications[i]).addClass('active');
+                    }
+                });
+            }
+        }
+    }
+}
+
 function setHomeNotification() {
     if ($('.cardContent').is(':visible')) {
         notificationCheck.set();
+    }
+    if ($("#scheduleAccordion").is(":visible")) {
+        medicationNotify.set();
     }
 }

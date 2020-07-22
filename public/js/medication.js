@@ -2,9 +2,21 @@ var medicationData, calendarInput;
 
 $(document).ready(function () {
     showMedicationList();
+    if (sessionStorage.medicationNotifications !== undefined) {
+        setTimeout(() => {
+            medicationNotify.get();
+        }, 200);
+    }
+});
+
+$(document).on('click', '#calendarCarousel li', function () {
+    var selectedDate = $(this).data().date;
+    selectedDate === undefined ? selectedDate = "first-june" : $(this).data().date;
 });
 
 $(document).on('click', '.carousel-item li', function () {
+    $("#calendarCarousel li").removeClass("active");
+    $(this).addClass("active");
     calendarInput = $(this).data('date');
     var calDateFormat = calendarInput !== undefined ? calendarInput.split("-") : '';
     var formatDate = calDateFormat[1] + "/" + calDateFormat[0] + "/" + calDateFormat[2];
@@ -13,6 +25,11 @@ $(document).on('click', '.carousel-item li', function () {
     var months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
     $("#todaysDate span").text(months[calendarDate.getMonth()] + " " + calendarDate.getDate() + " " + weekDays[calendarDate.getDay()])
     sortJsonByTime(calendarInput);
+    if (sessionStorage.medicationNotifications !== undefined) {
+        setTimeout(() => {
+            medicationNotify.get();
+        }, 200);
+    }
 });
 
 $(document).on('click', '#medicationList', function () {
@@ -125,16 +142,20 @@ function sortJsonByTime(calendarInput) {
 
                 if (calendarDate.getTime() <= medEndDate.getTime()
                     && calendarDate.getTime() >= medStartDate.getTime()) {
+                    var dateid = $(".carousel-item li.active").data("date");
+                    var timeid = (value.suggestedTime).replace(/\s/g, '');
                     var mediNotes = value.notes !== "" ? ", " + value.notes : value.notes;
                     mediList = mediList + '<div class="card-body"><div class="row"><div class="col-1 col-sm-2 icon ' + value.color + '"><div class="' + value.shape + '"></div></div>' +
                         '<div class="col-7 col-sm-6 info"><h6>' + value.name + ' ' + value.dose + '</h6>' +
                         '<p>' + value.frequency + mediNotes + '</p></div>' +
                         '<div class="col-4 col-sm-4 action"><div class="align-center">' +
-                        '<span class="notify"></span><span class="alert-me"></span></div></div></div></div>';
+                        '<span id="notify-' + value.name + '-' + dateid + '-' + timeid + '" class="notify"></span><span id="alert-' + value.name + '-' + dateid + '-' + timeid + '" class="alert-me"></span></div></div></div></div>';
                 }
 
             });
             if (mediList !== "") {
+                var dateid = $(".carousel-item li.active").data("date");
+                var timeid = key.replace(/\s/g, '');
                 headingId = "heading" + i;
                 accordionId = "collapse" + i;
                 mediSchedule = mediSchedule + '<div class="card"><div class="card-header" id="' + headingId + '">' +
@@ -142,8 +163,8 @@ function sortJsonByTime(calendarInput) {
                     '<img src="../images/schedule/accordian-medication.svg" width="40" alt="medication"/> Medication at ' +
                     key + '</button></h5></div>' +
                     '<div id="' + accordionId + '" class="collapse" aria-labelledby="' + headingId + '" data-parent="#scheduleAccordion">' +
-                    '<div class="card-body mb-1"><div class="row border-0"><div class="col-12 col-sm-12 action select-all"><span class="notifyAll"><br>' +
-                    '<p>ALL</p></span><span class="checkAll"><br><p>ALL</p></span></div></div></div>' + mediList + '</div></div>';
+                    '<div class="card-body mb-1"><div class="row border-0"><div class="col-12 col-sm-12 action select-all"><span id="notify-all-' + dateid + '-' + timeid + '" class="notifyAll"><br>' +
+                    '<p>ALL</p></span><span id="check-all-' + dateid + '-' + timeid + '" class="checkAll"><br><p>ALL</p></span></div></div></div>' + mediList + '</div></div>';
                 i = i + 1;
             }
             $("#scheduleAccordion").html(mediSchedule);
