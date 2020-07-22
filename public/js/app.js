@@ -169,7 +169,7 @@ $(document).ready(function () {
             $(".bell-counter").css("padding", "0 6px");
         }
         $(".bell-counter").text(notifyCount);
-        notificationCheck.set();
+        setHomeNotification();
     });
 
     $(document).on('click', '.alert-me', function () {
@@ -179,7 +179,7 @@ $(document).ready(function () {
                 $(this).parents(".collapse, .cardContent").find(".checkAll").toggleClass("active");
             }
         }
-        notificationCheck.set();
+        setHomeNotification();
     });
 
     $(document).on('click', '.notifyAll', function () {
@@ -203,7 +203,7 @@ $(document).ready(function () {
             $(".bell-counter").css("padding", "0 6px")
         }
         $(".bell-counter").text(notifyCount);
-        notificationCheck.set();
+        setHomeNotification();
     });
 
     $(document).on('click', '.checkAll', function () {
@@ -212,7 +212,7 @@ $(document).ready(function () {
         $(this).parents(".collapse, .cardContent").find(".alert-me").each(function () {
             selectAll($(this), that);
         });
-        notificationCheck.set();
+        setHomeNotification();
     });
 
     function selectAll(self, that) {
@@ -319,4 +319,10 @@ function getFavorites() {
     setTimeout(() => {
         favoritesCheck.get();
     }, 100);
+}
+
+function setHomeNotification() {
+    if ($('.cardContent').is(':visible')) {
+        notificationCheck.set();
+    }
 }
