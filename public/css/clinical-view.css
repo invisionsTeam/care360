@@ -6,6 +6,10 @@
     background: #f7f9fa;
 }
 
+.bg-white {
+    background: #ffffff;
+}
+
 .bg-image-red {
     background-image: url(../images/clinical/card-red.png);
     background-position: 0 -2px;
@@ -40,7 +44,11 @@
 }
 
 .min-height-cards {
-    min-height: 155px;
+    min-height: 159px;
+}
+
+.bg-white.cards-heights {
+    min-height: 860px;
 }
 
 .padding20 {
@@ -95,8 +103,16 @@
     margin-right: 5px;
 }
 
+.margin10 {
+    margin: 10px;
+}
+
 .width100 {
     width: 100%;
+}
+
+.width95 {
+    width: 95%;
 }
 
 .width25 {
@@ -474,10 +490,9 @@ header .full-width-divider .risk-patients-tabs .nav-tabs>li>a.active, .nav-tabs>
     border: 1px solid #dddddd;
 }
 
-.custom-card.card {
-    margin: 15px auto;
+.custom-card {
     box-shadow: none;
-    padding: 0;
+    padding: 10px;
 }
 
 /* FOOTER */
