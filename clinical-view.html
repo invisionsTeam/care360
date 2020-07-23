@@ -49,22 +49,22 @@
       </span>
     </nav>
 
-    <div class="full-width-divider">
+    <div class="full-width-divider" id="nav-tab" role="tablist">
       <ul class="nav nav-tabs nav-tabs-margin">
-        <li class="active tab-panel tab-panel-margin">
+        <li class="tab-panel tab-panel-margin">
           <div class="tab-panel-count">10</div>
-          <a data-toggle="tab" href="#myPatients">My Patients</a>
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" role="tab" aria-selected="true" href="#myPatients">My Patients</a>
         </li>
         <li class="tab-panel tab-panel-margin">
           <div class="tab-panel-count">05</div>
-          <a data-toggle="tab" href="#attentionPatients">Attention Patients</a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" role="tab" aria-selected="false" href="#attentionPatients">Attention Patients</a>
         </li>
         <li class="tab-panel tab-panel-margin">
           <div class="tab-panel-count">35</div>
-          <a data-toggle="tab" href="#allPatients">All Patients</a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" role="tab" aria-selected="false" href="#allPatients">All Patients</a>
         <li class="tab-panel tab-panel-margin">
           <div class="tab-panel-count">20</div>
-          <a data-toggle="tab" href="#mySitePatients">My Site Patients</a>
+          <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" role="tab" aria-selected="false" href="#mySitePatients">My Site Patients</a>
         </li>
       </ul>
     </div>
@@ -91,19 +91,19 @@
             </ul>
           </div>
         </div>
-        <div id="attentionPatients" class="tab-pane">
+        <div id="attentionPatients" class="tab-pane padding20">
           <h3>Attention Patients</h3>
           <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat.
           </p>
         </div>
-        <div id="allPatients" class="tab-pane">
+        <div id="allPatients" class="tab-pane padding20">
           <h3>All Patients</h3>
           <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
             rem
             aperiam.</p>
         </div>
-        <div id="mySitePatients" class="tab-pane">
+        <div id="mySitePatients" class="tab-pane padding20">
           <h3>My Site Patients</h3>
           <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         </div>
