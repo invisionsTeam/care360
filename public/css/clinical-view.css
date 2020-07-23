@@ -182,13 +182,13 @@
     font-size: 18px;
     color: #424242;
     background-color: #b8e1ff;
-    height: 34px;
+    height: 39px;
     padding: 6px 15px;
     margin-right: 66px;
 }
 
 .header-logo-span .navbar-brand.navbar-brand-dashboard {
-    padding: 15px 0 30px 0;
+    padding: 30px 0;
 }
 
 .navbar-right {
@@ -510,12 +510,12 @@ header .full-width-divider .nav-tabs>li>a:hover {
     }
  }
 
- @media (min-width: 768px) {
+ /* @media (min-width: 768px) {
     .col-md-6 {
     flex: 0 0 46% !important;
     max-width: 50%;
 }
- }
+ } */
 
 
  /* @media screen and (max-width: 575px) {
@@ -541,6 +541,7 @@ header .full-width-divider .nav-tabs>li>a:hover {
         flex: 0 0 30%;
     }
  } */
+
  /* Transition */
 
  .my-patients-search.form-control {
@@ -566,8 +567,70 @@ header .full-width-divider .nav-tabs>li>a:hover {
  .green-border {
     background-color: #28c96d;
     height: 8px;
-    width: 95px;
+    width: 100px;
     position: absolute;
-    bottom: -20px;
-    left: 180px;
+    bottom: 0px;
+    left: 183px;
  }
+
+ /* Tabs */
+
+ .tabs {
+    max-width: 640px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+  #tab-button {
+    display: table;
+    table-layout: fixed;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+  }
+  #tab-button li {
+    display: table-cell;
+    width: 20%;
+  }
+  #tab-button li a {
+    display: block;
+    padding: .5em;
+    background: #eee;
+    border: 1px solid #ddd;
+    text-align: center;
+    color: #000;
+    text-decoration: none;
+  }
+  #tab-button li:not(:first-child) a {
+    border-left: none;
+  }
+  #tab-button li a:hover,
+  #tab-button .is-active a {
+    border-bottom-color: transparent;
+    background: #fff;
+  }
+  .tab-contents {
+    padding: .5em 2em 1em;
+    border: 1px solid #ddd;
+  }
+  .tab-button-outer {
+    display: none;
+  }
+  .tab-contents {
+    margin-top: 20px;
+  }
+  @media screen and (min-width: 768px) {
+    .tab-button-outer {
+      position: relative;
+      z-index: 2;
+      display: block;
+    }
+    .tab-select-outer {
+      display: none;
+    }
+    .tab-contents {
+      position: relative;
+      top: -1px;
+      margin-top: 0;
+    }
+  }
