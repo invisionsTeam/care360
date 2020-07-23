@@ -2,8 +2,6 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/clinical-view.css">
-  <link rel="stylesheet" type="text/css" href="css/cards.css">
   <!-- Roboto font -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -11,23 +9,58 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-  <!-- Bootstrap core CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
   <!-- Material Design Bootstrap -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
+  <!-- <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet"> -->
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="css/clinical-view.css">
+  <link rel="stylesheet" type="text/css" href="css/cards.css">
 </head>
 
 <body>
 
-  <header>
+
+  <!-- Navigation -->
+  <nav class="navbar navbar-expand-lg navbar-dark custom-bg static-top">
+    <div class="container">
+      <a class="navbar-brand brand-logo" href="#">
+        <strong>LOGO</strong>
+      </a>
+      <div>
+        <a class="navbar-brand navbar-brand-dashboard" href="#"><strong>Dashboard</strong></a>
+        <div class="green-border"></div>
+      </div>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+        aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto navbar-icons">
+          <li class="nav-item active">
+            <a class="email-image" href="#"><img class="email-icon" src="images/clinical/email.svg"
+                alt="user profile icon"></a>
+            <span class="bell-counter-single">6</span>
+          </li>
+          <li class="nav-item">
+            <a class="notification-image" href="#"><img class="notification-icon" src="images/clinical/notification.svg"
+                alt="user profile icon"></a>
+            <span class="bell-counter">12</span>
+          </li>
+          <li class="nav-item">
+            <a class="profile-image" href="#"><img class="user-profile-icon" src="images/profile-pic.svg"
+                alt="user profile icon"></a>
+            <span class="user-name">John Smith</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- <header>
 
     <nav class="navbar navbar90px navbar-border-none navbar-expand-lg navbar-dark custom-blue scrolling-navbar no-border-radius navbar-transition">
       <span class="header-logo-span"><a class="navbar-brand navbar-brand-logo" href="#"><strong>LOGO</strong></a>
@@ -49,32 +82,32 @@
       </span>
     </nav>
 
-    <div class="full-width-divider" id="nav-tab" role="tablist">
+    <div class="full-width-divider">
       <ul class="nav nav-tabs nav-tabs-margin">
-        <li class="tab-panel tab-panel-margin">
+        <li class="active tab-panel tab-panel-margin">
           <div class="tab-panel-count">10</div>
-          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" role="tab" aria-selected="true" href="#myPatients">My Patients</a>
+          <a data-toggle="tab" href="#myPatients">My Patients</a>
         </li>
         <li class="tab-panel tab-panel-margin">
           <div class="tab-panel-count">05</div>
-          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" role="tab" aria-selected="false" href="#attentionPatients">Attention Patients</a>
+          <a data-toggle="tab" href="#attentionPatients">Attention Patients</a>
         </li>
         <li class="tab-panel tab-panel-margin">
           <div class="tab-panel-count">35</div>
-          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" role="tab" aria-selected="false" href="#allPatients">All Patients</a>
+          <a data-toggle="tab" href="#allPatients">All Patients</a>
         <li class="tab-panel tab-panel-margin">
           <div class="tab-panel-count">20</div>
-          <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" role="tab" aria-selected="false" href="#mySitePatients">My Site Patients</a>
+          <a data-toggle="tab" href="#mySitePatients">My Site Patients</a>
         </li>
       </ul>
     </div>
 
-  </header>
+  </header> -->
 
   <!--Main Navigation-->
 
   <!--Main Layout-->
-  <div class="container-background">
+  <!-- <div class="container-background">
     <div class="container paddingLeft25px paddingLeft45px">
       <div class="tab-content tab-content-flex">
         <div id="myPatients" class="tab-pane active custom-tab-pane">
@@ -91,19 +124,19 @@
             </ul>
           </div>
         </div>
-        <div id="attentionPatients" class="tab-pane padding20">
+        <div id="attentionPatients" class="tab-pane">
           <h3>Attention Patients</h3>
           <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
             consequat.
           </p>
         </div>
-        <div id="allPatients" class="tab-pane padding20">
+        <div id="allPatients" class="tab-pane">
           <h3>All Patients</h3>
           <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam
             rem
             aperiam.</p>
         </div>
-        <div id="mySitePatients" class="tab-pane padding20">
+        <div id="mySitePatients" class="tab-pane">
           <h3>My Site Patients</h3>
           <p>Eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.</p>
         </div>
@@ -650,10 +683,19 @@
         </div>
       </div>
     </div>
-  </div>
+  </div> -->
   <!--Main Layout-->
   <!-- Footer -->
-  <div class="clinical-footer">
+  <!-- <div class="clinical-footer">
     <p>© 2020 Company Name. All rights reserved </p>
-  </div>
+  </div> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 </body>
