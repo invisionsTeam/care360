@@ -525,39 +525,18 @@ header .full-width-divider .risk-patients-tabs .nav-tabs>li>a.active, .nav-tabs>
     .paddingLeft45px.container {
         padding-left: 45px;
     }
- }
 
- /* @media (min-width: 768px) {
-    .col-md-6 {
-    flex: 0 0 46% !important;
-    max-width: 50%;
-}
- } */
-
-
- /* @media screen and (max-width: 575px) {
-    .cards-row.row .custom-card {
-        flex: 0 0 100%;
+    .nav-tabs.nav-tabs-margin {
+        margin: auto;
     }
  }
 
- @media screen and (min-width: 576px) and (max-width: 767px) {
-    .cards-row.row .custom-card {
-        flex: 0 0 50%;
+ @media (max-width: 768px) {
+    .nav-tabs.nav-tabs-margin {
+        margin: 0;
+        padding: 0;
     }
  }
-
- @media screen and (min-width: 768px) and (max-width: 991px) {
-    .cards-row.row .custom-card {
-        flex: 0 0 30%;
-    }
- }
-
- @media screen and (min-width: 992px) and (max-width: 1199px) {
-    .cards-row.row .custom-card {
-        flex: 0 0 30%;
-    }
- } */
 
  /* Transition */
 
