@@ -82,12 +82,12 @@
             <input type="search" class="form-control my-patients-search" placeholder="Search by Patient Name or ID" />
             <img class="search-icon" src="images/clinical/search.svg" />
           </div>
-          <div class="risk-patients-tabs">
+          <div class="risk-patients-tabs" id="nav-tab" role="tablist">
             <ul class="nav nav-tabs risk-tabs">
-              <li class="active tab-panel"><a data-toggle="tab" href="#allRiskPatients">All</a></li>
-              <li class="tab-panel"><a data-toggle="tab" href="#highRiskPatients">High Risk</a></li>
-              <li class="tab-panel"><a data-toggle="tab" href="#mediumRiskPatients">Medium Risk</a>
-              <li class="tab-panel"><a data-toggle="tab" href="#lowRiskPatients">Low Risk</a></li>
+              <li class="active tab-panel"><a class="nav-item nav-link active" data-toggle="tab" role="tab" aria-selected="true" href="#allRiskPatients">All</a></li>
+              <li class="tab-panel"><a class="nav-item nav-link" data-toggle="tab" role="tab" aria-selected="false" href="#highRiskPatients">High Risk</a></li>
+              <li class="tab-panel"><a class="nav-item nav-link" data-toggle="tab" role="tab" aria-selected="false" href="#mediumRiskPatients">Medium Risk</a>
+              <li class="tab-panel"><a class="nav-item nav-link" data-toggle="tab" role="tab" aria-selected="false" href="#lowRiskPatients">Low Risk</a></li>
             </ul>
           </div>
         </div>

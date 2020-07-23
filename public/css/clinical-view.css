@@ -377,9 +377,14 @@ header .full-width-divider .nav-tabs>li>a:hover {
     border-radius: 4px;
 }
 
+.risk-patients-tabs .nav-tabs {
+    border: none;
+}
+
 .risk-patients-tabs .nav-tabs>li>a {
     border: none;
     margin-right: 0;
+    font-size: 14px;
 }
 
 /* .risk-patients-tabs .risk-tabs.nav-tabs>li {
@@ -390,14 +395,20 @@ header .full-width-divider .nav-tabs>li>a:hover {
     border-right: 1px solid #123e95;
 }
 
-.risk-patients-tabs .risk-tabs.nav-tabs>li.active>a {
+.risk-patients-tabs .risk-tabs.nav-tabs>li>a.active {
     background-color: #123e95;
     color: #fff;
 }
 
+header .full-width-divider .risk-patients-tabs .nav-tabs>li>a.active, .nav-tabs>li>a.active:hover {
+    border: none;
+}
+
 .nav.risk-tabs li a {
-    width: 115px;
+    width: 107px;
     text-align: center;
+    padding: 9px 5px;
+    margin-bottom: 0;
 }
 
 .custom-tab-pane .risk-patients-tabs .nav-tabs>li.active>a, .nav-tabs>li.active>a:focus, .nav-tabs>li.active>a:hover, .nav-tabs>li>a:hover {
@@ -574,29 +585,3 @@ header .full-width-divider .nav-tabs>li>a:hover {
     bottom: 0px;
     left: 183px;
  }
-
- /* Tabs */
-
-section {
-    padding: 60px 0;
-}
-
-section .section-title {
-    text-align: center;
-    margin-bottom: 50px;
-    text-transform: uppercase;
-}
-#tabs{
-    color: #eee;
-}
-#tabs h6.section-title{
-    color: #eee;
-}
-
-#tabs .nav-tabs .nav-link {
-    border: 1px solid transparent;
-    border-top-left-radius: .25rem;
-    border-top-right-radius: .25rem;
-    color: #eee;
-    font-size: 20px;
-}
