@@ -30,17 +30,17 @@
 
 .border-red {
     border: 0 !important;
-    border-top: 5px solid #e43535 !important;
+    border-top: 4px solid #e43535 !important;
 }
 
 .border-orange {
     border: 0 !important;
-    border-top: 5px solid #ff903d !important;
+    border-top: 4px solid #ff903d !important;
 }
 
 .border-green {
     border: 0 !important;
-    border-top: 5px solid #28c96d !important;
+    border-top: 4px solid #28c96d !important;
 }
 
 .min-height-cards {
