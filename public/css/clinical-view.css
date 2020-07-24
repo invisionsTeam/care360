@@ -398,6 +398,10 @@ header .full-width-divider .nav-tabs>li>a:hover {
     border: none;
 }
 
+.risk-patients-tabs .nav-tabs {
+    border: none;
+}
+
 .risk-patients-tabs .nav-tabs>li>a {
     border: none;
     margin-right: 0;
