@@ -540,9 +540,15 @@ header .full-width-divider .risk-patients-tabs .nav-tabs>li>a.active, .nav-tabs>
         display: none;
     }
     .navbar-dashboard {
-        position: relative;
         right: 195px;
     }
+ }
+
+ @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+     .nav.risk-tabs li a {
+         width: 100%;
+         padding: 9px 9px;
+     }
  }
 
  @media (max-width: 768px) {
@@ -580,7 +586,6 @@ header .full-width-divider .risk-patients-tabs .nav-tabs>li>a.active, .nav-tabs>
     width: 100px;
     position: absolute;
     bottom: 0px;
-    left: 312px;
  }
 
 
