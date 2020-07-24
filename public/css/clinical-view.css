@@ -596,3 +596,28 @@ header .full-width-divider .risk-patients-tabs .nav-tabs>li>a.active, .nav-tabs>
 .navbar-icons li {	
   margin-top: 15px;	
 }
+
+@media only screen and (max-width: 767px) {
+    .tab-content .custom-tab-pane.active {
+        display: block;
+    }
+    .my-patients {
+        margin-right: 0;
+    }
+    .my-patients-search.form-control {
+        display: block;
+        width: 100%;
+        height: 40px;
+    }
+    .search-icon {
+        position: relative;
+        bottom: 33px;
+        left: 10px;
+    }
+    .nav.risk-tabs li a {
+        width: 100%;
+        text-align: center;
+        padding: 9px 12px;
+        margin-bottom: 0;
+    }
+}
