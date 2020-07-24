@@ -47,10 +47,6 @@
     min-height: 159px;
 }
 
-.bg-white.cards-heights {
-    min-height: 860px;
-}
-
 .padding20 {
     padding: 20px;
 }
@@ -350,7 +346,7 @@ header .full-width-divider .nav-tabs>li>a:hover {
 }
 
 .nav-tabs.nav-tabs-margin {
-    margin: auto 90px;
+    margin: auto 60px;
     padding: 0 30px;
 }
 
@@ -395,6 +391,7 @@ header .full-width-divider .nav-tabs>li>a:hover {
     background: #fff;
     border: 1px solid #123e95;
     border-radius: 4px;
+    width: fit-content;
 }
 
 .risk-patients-tabs .nav-tabs {
