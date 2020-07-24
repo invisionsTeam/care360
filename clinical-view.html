@@ -2,8 +2,6 @@
 
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="css/clinical-view.css">
-  <link rel="stylesheet" type="text/css" href="css/cards.css">
   <!-- Roboto font -->
   <link href='https://fonts.googleapis.com/css?family=Open+Sans' rel='stylesheet'>
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
@@ -11,60 +9,74 @@
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
   <!-- Google Fonts -->
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap">
-  <!-- Bootstrap core CSS -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/css/bootstrap.min.css" rel="stylesheet">
-  <!-- Material Design Bootstrap -->
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/mdbootstrap/4.19.1/css/mdb.min.css" rel="stylesheet">
   <!-- Font Awesome Icons -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css"
+    integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="css/clinical-view.css">
+  <link rel="stylesheet" type="text/css" href="css/cards.css">
 </head>
 
 <body>
 
   <header>
-
-    <nav class="navbar navbar90px navbar-border-none navbar-expand-lg navbar-dark custom-blue scrolling-navbar no-border-radius navbar-transition">
-      <span class="header-logo-span"><a class="navbar-brand navbar-brand-logo" href="#"><strong>LOGO</strong></a>
-        <span><a class="navbar-brand navbar-brand-dashboard" href="#"><strong>Dashboard</strong></a>
+    <nav class="navbar navbar-expand-lg navbar-dark custom-bg static-top">
+      <div class="container">
+        <a class="navbar-brand brand-logo" href="#">
+          <strong>LOGO</strong>
+        </a>
+        <div class="navbar-dashboard">
+          <a class="navbar-brand navbar-brand-dashboard" href="#"><strong>Dashboard</strong></a>
           <div class="green-border"></div>
-        </span>
-      </span>
-      <span class="navbar-right text-white right-75px">
-        <span><a class="email-image" href="#"><img class="email-icon" src="images/clinical/email.svg"
-              alt="user profile icon"></a>
-          <span class="bell-counter-single">6</span></span>
-        <span><a class="notification-image" href="#"><img class="notification-icon"
-              src="images/clinical/notification.svg" alt="user profile icon"></a>
-          <span class="bell-counter">12</span></span>
-        <span><a class="profile-image" href="#"><img class="user-profile-icon" src="images/profile-pic.svg"
-              alt="user profile icon"></a>
-          <span class="user-name">John Smith</span></span>
         </div>
-      </span>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive"
+          aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto navbar-icons">
+            <li class="nav-item active margintop15">
+              <a class="email-image" href="#"><img class="email-icon" src="images/clinical/email.svg"
+                  alt="user profile icon"></a>
+              <span class="bell-counter-single">6</span>
+            </li>
+            <li class="nav-item margintop15">
+              <a class="notification-image" href="#"><img class="notification-icon"
+                  src="images/clinical/notification.svg" alt="user profile icon"></a>
+              <span class="bell-counter">12</span>
+            </li>
+            <li class="nav-item margintop10">
+              <a class="profile-image" href="#"><img class="user-profile-icon" src="images/profile-pic.svg"
+                  alt="user profile icon"></a>
+              <span class="user-name">John Smith</span>
+            </li>
+          </ul>
+        </div>
+      </div>
     </nav>
 
     <div class="full-width-divider" id="nav-tab" role="tablist">
       <ul class="nav nav-tabs nav-tabs-margin">
         <li class="tab-panel tab-panel-margin">
           <div class="tab-panel-count">10</div>
-          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" role="tab" aria-selected="true" href="#myPatients">My Patients</a>
+          <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" role="tab" aria-selected="true"
+            href="#myPatients">My Patients</a>
         </li>
         <li class="tab-panel tab-panel-margin">
           <div class="tab-panel-count">05</div>
-          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" role="tab" aria-selected="false" href="#attentionPatients">Attention Patients</a>
+          <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" role="tab" aria-selected="false"
+            href="#attentionPatients">Attention Patients</a>
         </li>
         <li class="tab-panel tab-panel-margin">
           <div class="tab-panel-count">35</div>
-          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" role="tab" aria-selected="false" href="#allPatients">All Patients</a>
+          <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" role="tab" aria-selected="false"
+            href="#allPatients">All Patients</a>
         <li class="tab-panel tab-panel-margin">
           <div class="tab-panel-count">20</div>
-          <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" role="tab" aria-selected="false" href="#mySitePatients">My Site Patients</a>
+          <a class="nav-item nav-link" id="nav-about-tab" data-toggle="tab" role="tab" aria-selected="false"
+            href="#mySitePatients">My Site Patients</a>
         </li>
       </ul>
     </div>
@@ -75,7 +87,7 @@
 
   <!--Main Layout-->
   <div class="container-background">
-    <div class="container paddingLeft25px paddingLeft45px">
+    <div class="container">
       <div class="tab-content tab-content-flex">
         <div id="myPatients" class="tab-pane active custom-tab-pane">
           <div class="my-patients">
@@ -84,10 +96,14 @@
           </div>
           <div class="risk-patients-tabs" id="nav-tab" role="tablist">
             <ul class="nav nav-tabs risk-tabs">
-              <li class="active tab-panel"><a class="nav-item nav-link active" data-toggle="tab" role="tab" aria-selected="true" href="#allRiskPatients">All</a></li>
-              <li class="tab-panel"><a class="nav-item nav-link" data-toggle="tab" role="tab" aria-selected="false" href="#highRiskPatients">High Risk</a></li>
-              <li class="tab-panel"><a class="nav-item nav-link" data-toggle="tab" role="tab" aria-selected="false" href="#mediumRiskPatients">Medium Risk</a>
-              <li class="tab-panel"><a class="nav-item nav-link" data-toggle="tab" role="tab" aria-selected="false" href="#lowRiskPatients">Low Risk</a></li>
+              <li class="active tab-panel"><a class="nav-item nav-link active" data-toggle="tab" role="tab"
+                  aria-selected="true" href="#allRiskPatients">All</a></li>
+              <li class="tab-panel"><a class="nav-item nav-link" data-toggle="tab" role="tab" aria-selected="false"
+                  href="#highRiskPatients">High Risk</a></li>
+              <li class="tab-panel"><a class="nav-item nav-link" data-toggle="tab" role="tab" aria-selected="false"
+                  href="#mediumRiskPatients">Medium Risk</a>
+              <li class="tab-panel"><a class="nav-item nav-link" data-toggle="tab" role="tab" aria-selected="false"
+                  href="#lowRiskPatients">Low Risk</a></li>
             </ul>
           </div>
         </div>
@@ -110,202 +126,106 @@
       </div>
     </div>
 
-    <div class="container container-background width-768px">
+    <div class="container container-background">
       <div id="allRiskPatients" class="card-pane">
-        <div class="cards-row row">
-          <div class="custom-card card col-sm-12 col-md-6 col-lg-4 border-red">
-            <div class="display-flex width100 padding20 bg-gray min-height-cards bg-image-red">
-              <div class="margin1020 width25">
-                <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
-                <div class="custom-card-title margintop15 color-dark">Day 6</div>
-              </div>
-              <div>
-                <h5 class="card-title custom-card-title color-dark">Paul Johnson 49/M</h5>
-                <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
-                <div class="margintop20">
-                  <div class="custom-card-subtitle color-blue">Coronary Artery Bypass</div>
-                  <div class="custom-card-subtitle color-dark">Diabetes Mellitus</div>
+        <div class="row">
+          <div class="custom-card col-sm-12 col-md-6 col-lg-4">
+            <div class="bg-white h-100">
+              <div class="display-flex width100 padding20 bg-gray min-height-cards border-red bg-image-red">
+                <div class="margin1020 width25">
+                  <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
+                  <div class="custom-card-title margintop15 color-dark">Day 6</div>
+                </div>
+                <div>
+                  <h5 class="card-title custom-card-title color-dark">Paul Johnson 49/M</h5>
+                  <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
+                  <div class="margintop20">
+                    <div class="custom-card-subtitle color-blue">Coronary Artery Bypass</div>
+                    <div class="custom-card-subtitle color-dark">Diabetes Mellitus</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="padding20">
-              <div>
-                <div class="text-body color-dark border-bottom-gray">Vitals (1, July, 2020 8:00 am)</div>
-                <div class="width100 margintop15 display-flex">
-                  <div class="width50 display-flex">
-                    <img class="margintop5 image24" src="images/clinical/heartrate.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">Heart Rate</div>
-                      <div class="custom-card-title color-dark">94</div>
+              <div class="padding20 bg-white">
+                <div>
+                  <div class="text-body color-dark border-bottom-gray">Vitals (1, July, 2020 8:00 am)</div>
+                  <div class="width100 margintop15 display-flex">
+                    <div class="width50 display-flex">
+                      <img class="margintop5 image24" src="images/clinical/heartrate.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">Heart Rate</div>
+                        <div class="custom-card-title color-dark">94</div>
+                      </div>
+                    </div>
+                    <div class="display-flex">
+                      <img class="margintop5 image24" src="images/clinical/bloodpressure.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">SBP/DBP</div>
+                        <div class="custom-card-title color-red">140/90</div>
+                      </div>
                     </div>
                   </div>
-                  <div class="display-flex">
-                    <img class="margintop5 image24" src="images/clinical/bloodpressure.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">SBP/DBP</div>
-                      <div class="custom-card-title color-red">140/90</div>
+                  <div class="width100 margintop20 display-flex">
+                    <div class="width50 display-flex">
+                      <img class="margintop5 image24" src="images/clinical/temp.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">Temp</div>
+                        <div class="custom-card-title color-dark">95.5</div>
+                      </div>
                     </div>
-                  </div>
-                </div>
-                <div class="width100 margintop20 display-flex">
-                  <div class="width50 display-flex">
-                    <img class="margintop5 image24" src="images/clinical/temp.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">Temp</div>
-                      <div class="custom-card-title color-dark">95.5</div>
-                    </div>
-                  </div>
-                  <div class="display-flex">
-                    <img class="margintop5 image24" src="images/clinical/oxyzen.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">SPO2</div>
-                      <div class="custom-card-title color-dark">97</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Blood Sugar Level (07, July, 2020 8:00 am)</div>
-                <div class="margintop20">
-                  <div class="text-body-regular color-dark">Blood Sugar</div>
-                  <div class="display-flex">
-                    <img class="image15 margintop5 marginright5" src="images/clinical/arrow-up.png" alt="up arrow icon">
-                    <div class="custom-card-title color-red">240</div>
-                  </div>
-                </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Symptoms</div>
-                <div class="margintop20">
-                  <div class="display-flex text-body-regular color-dark symptoms">
-                    <li>Fatigue</li>
-                    <li>Headache</li>
-                    <li>Pain</li>
-                  </div>
-                </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
-                <div class="margintop20">
-                  <div class="display-flex">
-                    <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
-                    <div class="marginleft15">
-                      <div class="custom-card-title color-dark">20, July 2020</div>
-                      <div class="text-body-regular color-dark">11:30 am<span class="paddingleft10">45 min</span></div>
-                    </div>
-                    <div class=" marginleft15 text-body-regular color-dark">12 more days left</div>
-                  </div>
-                </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Adherence</div>
-                <div class="margintop20">
-                  <div class="display-flex">
-                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
-                        alt="alert icon"></div>
-                    <div class="text-body-regular color-dark marginleft15">
-                      <li>You missed <span class="color-red">2 Medications</span> last week</li>
-                      <li>Unstable blood sugar</li>
+                    <div class="display-flex">
+                      <img class="margintop5 image24" src="images/clinical/oxyzen.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">SPO2</div>
+                        <div class="custom-card-title color-dark">97</div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="custom-card card col-sm-12 col-md-6 col-lg-4 border-red">
-            <div class="display-flex width100 padding20 bg-gray min-height-cards bg-image-red">
-              <div class="margin1020 width25">
-                <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
-                <div class="custom-card-title margintop15 color-dark">Day 9</div>
-              </div>
-              <div>
-                <h5 class="card-title custom-card-title color-dark">Jane Doe 36/M</h5>
-                <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
-                <div class="margintop20">
-                  <div class="custom-card-subtitle color-blue">Mitral Valve Replacement</div>
-                  <div class="custom-card-subtitle color-dark">Hypertension</div>
-                </div>
-              </div>
-            </div>
-            <div class="padding20">
-              <div>
-                <div class="text-body color-dark border-bottom-gray">Vitals (1, July, 2020 8:00 am)</div>
-                <div class="width100 margintop15 display-flex">
-                  <div class="width50 display-flex">
-                    <img class="margintop5 image24" src="images/clinical/heartrate.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">Heart Rate</div>
-                      <div class="custom-card-title color-dark">94</div>
-                    </div>
-                  </div>
-                  <div class="display-flex">
-                    <img class="margintop5 image24" src="images/clinical/bloodpressure.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">SBP/DBP</div>
-                      <div class="custom-card-title color-red">142/102</div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Blood Sugar Level (07, July, 2020 8:00 am)</div>
+                  <div class="margintop20">
+                    <div class="text-body-regular color-dark">Blood Sugar</div>
+                    <div class="display-flex">
+                      <img class="image15 margintop5 marginright5" src="images/clinical/arrow-up.png"
+                        alt="up arrow icon">
+                      <div class="custom-card-title color-red">240</div>
                     </div>
                   </div>
                 </div>
-                <div class="width100 margintop20 display-flex">
-                  <div class="width50 display-flex">
-                    <img class="margintop5 image24" src="images/clinical/temp.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">Temp</div>
-                      <div class="custom-card-title color-red">102.2</div>
-                    </div>
-                  </div>
-                  <div class="display-flex">
-                    <img class="margintop5 image24" src="images/clinical/oxyzen.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">SPO2</div>
-                      <div class="custom-card-title color-dark">97</div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Symptoms</div>
+                  <div class="margintop20">
+                    <div class="display-flex text-body-regular color-dark symptoms">
+                      <li>Fatigue</li>
+                      <li>Headache</li>
+                      <li>Pain</li>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">PT INR Test (05, July, 2020 8:00 am)</div>
-                <div class="margintop20">
-                  <div class="text-body-regular color-dark">INR</div>
-                  <div class="display-flex">
-                    <img class="image15 margintop5 marginright5" src="images/clinical/arrow-up.png" alt="up arrow icon">
-                    <div class="custom-card-title color-red">3.58</div>
-                  </div>
-                </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Symptoms</div>
-                <div class="margintop20">
-                  <div class="display-flex text-body-regular color-dark symptoms">
-                    <li>Fatigue</li>
-                    <li>Headache</li>
-                    <li>Pain</li>
-                  </div>
-                </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
-                <div class="margintop20">
-                  <div class="display-flex">
-                    <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
-                    <div class="marginleft15">
-                      <div class="custom-card-title color-dark">22, July 2020</div>
-                      <div class="text-body-regular color-dark">11:30 am<span class="paddingleft10">45 min</span></div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
+                  <div class="margintop20">
+                    <div class="display-flex">
+                      <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
+                      <div class="marginleft15">
+                        <div class="custom-card-title color-dark">20, July 2020</div>
+                        <div class="text-body-regular color-dark">11:30 am<span class="paddingleft10">45 min</span>
+                        </div>
+                      </div>
+                      <div class=" marginleft15 text-body-regular color-dark">12 more days left</div>
                     </div>
-                    <div class=" marginleft15 text-body-regular color-dark">11 more days left</div>
                   </div>
                 </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Adherence</div>
-                <div class="margintop20">
-                  <div class="display-flex">
-                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
-                        alt="alert icon"></div>
-                    <div class="text-body-regular color-dark marginleft15">
-                      <li>You missed <span class="color-red">3 Medications</span> last week</li>
-                      <li>Higher INR, revisit medications</li>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Adherence</div>
+                  <div class="margintop20">
+                    <div class="display-flex">
+                      <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
+                          alt="alert icon"></div>
+                      <div class="text-body-regular color-dark marginleft15">
+                        <li>You missed <span class="color-red">2 Medications</span> last week</li>
+                        <li>Unstable blood sugar</li>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -313,134 +233,103 @@
             </div>
           </div>
 
-          <div class="custom-card card col-sm-12 col-md-6 col-lg-4 border-red">
-            <div class="display-flex width100 padding20 bg-gray min-height-cards bg-image-red">
-              <div class="margin1020 width25">
-                <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
-                <div class="custom-card-title margintop15 color-dark">Day 12</div>
-              </div>
-              <div>
-                <h5 class="card-title custom-card-title color-dark">Elizabeth Paul 35/F</h5>
-                <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
-                <div class="margintop20">
-                  <div class="custom-card-subtitle color-dark">Diabetes Mellitus</div>
+          <div class="custom-card col-sm-12 col-md-6 col-lg-4 ">
+            <div class="bg-white h-100">
+              <div class="display-flex width100 padding20 bg-gray min-height-cards border-red bg-image-red">
+                <div class="margin1020 width25">
+                  <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
+                  <div class="custom-card-title margintop15 color-dark">Day 9</div>
                 </div>
-              </div>
-            </div>
-            <div class="padding20">
-              <div>
-                <div class="text-body color-dark border-bottom-gray">Blood Sugar Level (09, July, 2020 9:00 am)</div>
-                <div class="margintop20">
-                  <div class="text-body-regular color-dark">Blood Sugar</div>
-                  <div class="display-flex">
-                    <img class="image15 margintop5 marginright5" src="images/clinical/arrow-up.png" alt="up arrow icon">
-                    <div class="custom-card-title color-red">240</div>
+                <div>
+                  <h5 class="card-title custom-card-title color-dark">Jane Doe 36/M</h5>
+                  <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
+                  <div class="margintop20">
+                    <div class="custom-card-subtitle color-blue">Mitral Valve Replacement</div>
+                    <div class="custom-card-subtitle color-dark">Hypertension</div>
                   </div>
                 </div>
               </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Symptoms</div>
-                <div class="margintop20">
-                  <div class="display-flex text-body-regular color-dark symptoms">
-                    <li>Fatigue</li>
-                  </div>
-                </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
-                <div class="margintop20">
-                  <div class="display-flex">
-                    <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
-                    <div class="marginleft15">
-                      <div class="custom-card-title color-dark">15, July 2020</div>
-                      <div class="text-body-regular color-dark">11:30 am<span class="paddingleft10">45 min</span></div>
+              <div class="padding20 bg-white">
+                <div>
+                  <div class="text-body color-dark border-bottom-gray">Vitals (1, July, 2020 8:00 am)</div>
+                  <div class="width100 margintop15 display-flex">
+                    <div class="width50 display-flex">
+                      <img class="margintop5 image24" src="images/clinical/heartrate.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">Heart Rate</div>
+                        <div class="custom-card-title color-dark">94</div>
+                      </div>
                     </div>
-                    <div class=" marginleft15 text-body-regular color-dark">7 more days left</div>
+                    <div class="display-flex">
+                      <img class="margintop5 image24" src="images/clinical/bloodpressure.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">SBP/DBP</div>
+                        <div class="custom-card-title color-red">142/102</div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Adherence</div>
-                <div class="margintop20">
-                  <div class="display-flex">
-                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
-                        alt="alert icon"></div>
-                    <div class="text-body-regular color-dark marginleft15">
-                      <li>You missed <span class="color-red">3 Medications</span> last week</li>
-                      <li>Unstable blood sugar</li>
+                  <div class="width100 margintop20 display-flex">
+                    <div class="width50 display-flex">
+                      <img class="margintop5 image24" src="images/clinical/temp.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">Temp</div>
+                        <div class="custom-card-title color-red">102.2</div>
+                      </div>
+                    </div>
+                    <div class="display-flex">
+                      <img class="margintop5 image24" src="images/clinical/oxyzen.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">SPO2</div>
+                        <div class="custom-card-title color-dark">97</div>
+                      </div>
                     </div>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-
-          <div class="custom-card card col-sm-12 col-md-6 col-lg-4 border-red">
-            <div class="display-flex width100 padding20 bg-gray min-height-cards bg-image-red">
-              <div class="margin1020 width25">
-                <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
-                <div class="custom-card-title margintop15 color-dark">Day 7</div>
-              </div>
-              <div>
-                <h5 class="card-title custom-card-title color-dark">Christian L 45/M</h5>
-                <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
-                <div class="margintop20">
-                  <div class="custom-card-subtitle color-dark">Hypertension</div>
-                </div>
-              </div>
-            </div>
-            <div class="padding20">
-              <div>
-                <div class="text-body color-dark border-bottom-gray">Vitals (1, July, 2020 8:00 am)</div>
-                <div class="width100 margintop15 display-flex">
-                  <div class="width50 display-flex">
-                    <img class="margintop5 image24" src="images/clinical/heartrate.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">Heart Rate</div>
-                      <div class="custom-card-title color-dark">94</div>
-                    </div>
-                  </div>
-                  <div class="display-flex">
-                    <img class="margintop5 image24" src="images/clinical/bloodpressure.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">SBP/DBP</div>
-                      <div class="custom-card-title color-red">142/102</div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">PT INR Test (05, July, 2020 8:00 am)</div>
+                  <div class="margintop20">
+                    <div class="text-body-regular color-dark">INR</div>
+                    <div class="display-flex">
+                      <img class="image15 margintop5 marginright5" src="images/clinical/arrow-up.png"
+                        alt="up arrow icon">
+                      <div class="custom-card-title color-red">3.58</div>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Symptoms</div>
-                <div class="margintop20">
-                  <div class="display-flex text-body-regular color-dark symptoms">
-                    <li>Fatigue</li>
-                    <li>Headache</li>
-                    <li>Pain</li>
-                  </div>
-                </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
-                <div class="margintop20">
-                  <div class="display-flex">
-                    <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
-                    <div class="marginleft15">
-                      <div class="custom-card-title color-dark">20, July 2020</div>
-                      <div class="text-body-regular color-dark">11:30 am<span class="paddingleft10">45 min</span></div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Symptoms</div>
+                  <div class="margintop20">
+                    <div class="display-flex text-body-regular color-dark symptoms">
+                      <li>Fatigue</li>
+                      <li>Headache</li>
+                      <li>Pain</li>
                     </div>
-                    <div class=" marginleft15 text-body-regular color-dark">12 more days left</div>
                   </div>
                 </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Adherence</div>
-                <div class="margintop20">
-                  <div class="display-flex">
-                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
-                        alt="alert icon"></div>
-                    <div class="text-body-regular color-dark marginleft15">
-                      <li>You missed <span class="color-red">4 Medications</span> last week</li>
-                      <li>Unstable blood sugar</li>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
+                  <div class="margintop20">
+                    <div class="display-flex">
+                      <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
+                      <div class="marginleft15">
+                        <div class="custom-card-title color-dark">22, July 2020</div>
+                        <div class="text-body-regular color-dark">11:30 am<span class="paddingleft10">45 min</span>
+                        </div>
+                      </div>
+                      <div class=" marginleft15 text-body-regular color-dark">11 more days left</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Adherence</div>
+                  <div class="margintop20">
+                    <div class="display-flex">
+                      <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
+                          alt="alert icon"></div>
+                      <div class="text-body-regular color-dark marginleft15">
+                        <li>You missed <span class="color-red">3 Medications</span> last week</li>
+                        <li>Higher INR, revisit medications</li>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -448,99 +337,65 @@
             </div>
           </div>
 
-          <div class="custom-card card col-sm-12 col-md-6 col-lg-4 border-orange">
-            <div class="display-flex width100 padding20 bg-gray min-height-cards bg-image-orange">
-              <div class="margin1020 width25">
-                <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
-                <div class="custom-card-title margintop15 color-dark">Day 9</div>
-              </div>
-              <div>
-                <h5 class="card-title custom-card-title color-dark">John Steve 43/M</h5>
-                <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
-                <div class="margintop20">
-                  <div class="custom-card-subtitle color-blue">Mitral Valve Replacement</div>
-                  <div class="custom-card-subtitle color-dark">Hypertension</div>
+          <div class="custom-card col-sm-12 col-md-6 col-lg-4 ">
+            <div class="bg-white h-100">
+              <div class="display-flex width100 padding20 bg-gray min-height-cards border-red bg-image-red">
+                <div class="margin1020 width25">
+                  <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
+                  <div class="custom-card-title margintop15 color-dark">Day 12</div>
+                </div>
+                <div>
+                  <h5 class="card-title custom-card-title color-dark">Elizabeth Paul 35/F</h5>
+                  <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
+                  <div class="margintop20">
+                    <div class="custom-card-subtitle color-dark">Diabetes Mellitus</div>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div class="padding20">
-              <div>
-                <div class="text-body color-dark border-bottom-gray">Vitals (1, July, 2020 8:00 am)</div>
-                <div class="width100 margintop15 display-flex">
-                  <div class="width50 display-flex">
-                    <img class="margintop5 image24" src="images/clinical/heartrate.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">Heart Rate</div>
-                      <div class="custom-card-title color-dark">94</div>
-                    </div>
-                  </div>
-                  <div class="display-flex">
-                    <img class="margintop5 image24" src="images/clinical/bloodpressure.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">SBP/DBP</div>
-                      <div class="custom-card-title color-dark">120/90</div>
+              <div class="padding20 bg-white">
+                <div>
+                  <div class="text-body color-dark border-bottom-gray">Blood Sugar Level (09, July, 2020 9:00 am)</div>
+                  <div class="margintop20">
+                    <div class="text-body-regular color-dark">Blood Sugar</div>
+                    <div class="display-flex">
+                      <img class="image15 margintop5 marginright5" src="images/clinical/arrow-up.png"
+                        alt="up arrow icon">
+                      <div class="custom-card-title color-red">240</div>
                     </div>
                   </div>
                 </div>
-                <div class="width100 margintop20 display-flex">
-                  <div class="width50 display-flex">
-                    <img class="margintop5 image24" src="images/clinical/temp.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">Temp</div>
-                      <div class="custom-card-title color-dark">95.5</div>
-                    </div>
-                  </div>
-                  <div class="display-flex">
-                    <img class="margintop5 image24" src="images/clinical/oxyzen.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">SPO2</div>
-                      <div class="custom-card-title color-dark">97</div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Symptoms</div>
+                  <div class="margintop20">
+                    <div class="display-flex text-body-regular color-dark symptoms">
+                      <li>Fatigue</li>
                     </div>
                   </div>
                 </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">PT INR Test (05, July, 2020 8:00 am)</div>
-                <div class="margintop20">
-                  <div class="text-body-regular color-dark">INR</div>
-                  <div class="display-flex">
-                    <img class="image15 margintop5 marginright5" src="images/clinical/arrow-up.png" alt="up arrow icon">
-                    <div class="custom-card-title color-red">3.58</div>
-                  </div>
-                </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Symptoms</div>
-                <div class="margintop20">
-                  <div class="display-flex text-body-regular color-dark symptoms">
-                    <li>Fatigue</li>
-                    <li>Headache</li>
-                    <li>Pain</li>
-                  </div>
-                </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
-                <div class="margintop20">
-                  <div class="display-flex">
-                    <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
-                    <div class="marginleft15">
-                      <div class="custom-card-title color-dark">22, July 2020</div>
-                      <div class="text-body-regular color-dark">11:30 am<span class="paddingleft10">45 min</span></div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
+                  <div class="margintop20">
+                    <div class="display-flex">
+                      <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
+                      <div class="marginleft15">
+                        <div class="custom-card-title color-dark">15, July 2020</div>
+                        <div class="text-body-regular color-dark">11:30 am<span class="paddingleft10">45 min</span>
+                        </div>
+                      </div>
+                      <div class=" marginleft15 text-body-regular color-dark">7 more days left</div>
                     </div>
-                    <div class=" marginleft15 text-body-regular color-dark">11 more days left</div>
                   </div>
                 </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Adherence</div>
-                <div class="margintop20">
-                  <div class="display-flex">
-                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
-                        alt="alert icon"></div>
-                    <div class="text-body-regular color-dark marginleft15">
-                      <li>You missed <span class="color-red">2 Medications</span> last week</li>
-                      <li>Higher INR, revisit medications</li>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Adherence</div>
+                  <div class="margintop20">
+                    <div class="display-flex">
+                      <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
+                          alt="alert icon"></div>
+                      <div class="text-body-regular color-dark marginleft15">
+                        <li>You missed <span class="color-red">3 Medications</span> last week</li>
+                        <li>Unstable blood sugar</li>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -548,99 +403,283 @@
             </div>
           </div>
 
-          <div class="custom-card card col-sm-12 col-md-6 col-lg-4 border-green">
-            <div class="display-flex width100 padding20 bg-gray min-height-cards bg-image-green">
-              <div class="margin1020 width25">
-                <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
-                <div class="custom-card-title margintop15 color-dark">Day 12</div>
+          <div class="custom-card col-sm-12 col-md-6 col-lg-4">
+            <div class="bg-white h-100">
+              <div class="display-flex width100 padding20 bg-gray min-height-cards border-red bg-image-red">
+                <div class="margin1020 width25">
+                  <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
+                  <div class="custom-card-title margintop15 color-dark">Day 7</div>
+                </div>
+                <div>
+                  <h5 class="card-title custom-card-title color-dark">Christian L 45/M</h5>
+                  <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
+                  <div class="margintop20">
+                    <div class="custom-card-subtitle color-dark">Hypertension</div>
+                  </div>
+                </div>
               </div>
-              <div>
-                <h5 class="card-title custom-card-title color-dark">Julie John 38/F</h5>
-                <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
-                <div class="margintop20">
-                  <div class="custom-card-subtitle color-blue">Mitral Valve Replacement</div>
-                  <div class="custom-card-subtitle color-dark">Hypertension</div>
+              <div class="padding20 bg-white">
+                <div>
+                  <div class="text-body color-dark border-bottom-gray">Vitals (1, July, 2020 8:00 am)</div>
+                  <div class="width100 margintop15 display-flex">
+                    <div class="width50 display-flex">
+                      <img class="margintop5 image24" src="images/clinical/heartrate.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">Heart Rate</div>
+                        <div class="custom-card-title color-dark">94</div>
+                      </div>
+                    </div>
+                    <div class="display-flex">
+                      <img class="margintop5 image24" src="images/clinical/bloodpressure.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">SBP/DBP</div>
+                        <div class="custom-card-title color-red">142/102</div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Symptoms</div>
+                  <div class="margintop20">
+                    <div class="display-flex text-body-regular color-dark symptoms">
+                      <li>Fatigue</li>
+                      <li>Headache</li>
+                      <li>Pain</li>
+                    </div>
+                  </div>
+                </div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
+                  <div class="margintop20">
+                    <div class="display-flex">
+                      <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
+                      <div class="marginleft15">
+                        <div class="custom-card-title color-dark">20, July 2020</div>
+                        <div class="text-body-regular color-dark">11:30 am<span class="paddingleft10">45 min</span>
+                        </div>
+                      </div>
+                      <div class=" marginleft15 text-body-regular color-dark">12 more days left</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Adherence</div>
+                  <div class="margintop20">
+                    <div class="display-flex">
+                      <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
+                          alt="alert icon"></div>
+                      <div class="text-body-regular color-dark marginleft15">
+                        <li>You missed <span class="color-red">4 Medications</span> last week</li>
+                        <li>Unstable blood sugar</li>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
-            <div class="padding20">
-              <div>
-                <div class="text-body color-dark border-bottom-gray">Vitals (1, July, 2020 8:00 am)</div>
-                <div class="width100 margintop15 display-flex">
-                  <div class="width50 display-flex">
-                    <img class="margintop5 image24" src="images/clinical/heartrate.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">Heart Rate</div>
-                      <div class="custom-card-title color-dark">94</div>
+          </div>
+
+          <div class="custom-card col-sm-12 col-md-6 col-lg-4">
+            <div class="bg-white h-100">
+              <div class="display-flex width100 padding20 bg-gray min-height-cards border-orange bg-image-orange">
+                <div class="margin1020 width25">
+                  <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
+                  <div class="custom-card-title margintop15 color-dark">Day 9</div>
+                </div>
+                <div>
+                  <h5 class="card-title custom-card-title color-dark">John Steve 43/M</h5>
+                  <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
+                  <div class="margintop20">
+                    <div class="custom-card-subtitle color-blue">Mitral Valve Replacement</div>
+                    <div class="custom-card-subtitle color-dark">Hypertension</div>
+                  </div>
+                </div>
+              </div>
+              <div class="padding20 bg-white">
+                <div>
+                  <div class="text-body color-dark border-bottom-gray">Vitals (1, July, 2020 8:00 am)</div>
+                  <div class="width100 margintop15 display-flex">
+                    <div class="width50 display-flex">
+                      <img class="margintop5 image24" src="images/clinical/heartrate.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">Heart Rate</div>
+                        <div class="custom-card-title color-dark">94</div>
+                      </div>
+                    </div>
+                    <div class="display-flex">
+                      <img class="margintop5 image24" src="images/clinical/bloodpressure.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">SBP/DBP</div>
+                        <div class="custom-card-title color-dark">120/90</div>
+                      </div>
                     </div>
                   </div>
-                  <div class="display-flex">
-                    <img class="margintop5 image24" src="images/clinical/bloodpressure.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">SBP/DBP</div>
-                      <div class="custom-card-title color-dark">120/90</div>
+                  <div class="width100 margintop20 display-flex">
+                    <div class="width50 display-flex">
+                      <img class="margintop5 image24" src="images/clinical/temp.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">Temp</div>
+                        <div class="custom-card-title color-dark">95.5</div>
+                      </div>
+                    </div>
+                    <div class="display-flex">
+                      <img class="margintop5 image24" src="images/clinical/oxyzen.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">SPO2</div>
+                        <div class="custom-card-title color-dark">97</div>
+                      </div>
                     </div>
                   </div>
                 </div>
-                <div class="width100 margintop20 display-flex">
-                  <div class="width50 display-flex">
-                    <img class="margintop5 image24" src="images/clinical/temp.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">Temp</div>
-                      <div class="custom-card-title color-dark">95.5</div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">PT INR Test (05, July, 2020 8:00 am)</div>
+                  <div class="margintop20">
+                    <div class="text-body-regular color-dark">INR</div>
+                    <div class="display-flex">
+                      <img class="image15 margintop5 marginright5" src="images/clinical/arrow-up.png"
+                        alt="up arrow icon">
+                      <div class="custom-card-title color-red">3.58</div>
                     </div>
                   </div>
-                  <div class="display-flex">
-                    <img class="margintop5 image24" src="images/clinical/oxyzen.png" alt="heart rate icon">
-                    <div class="marginleft15">
-                      <div class="text-body-regular color-dark">SPO2</div>
-                      <div class="custom-card-title color-dark">97</div>
+                </div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Symptoms</div>
+                  <div class="margintop20">
+                    <div class="display-flex text-body-regular color-dark symptoms">
+                      <li>Fatigue</li>
+                      <li>Headache</li>
+                      <li>Pain</li>
+                    </div>
+                  </div>
+                </div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
+                  <div class="margintop20">
+                    <div class="display-flex">
+                      <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
+                      <div class="marginleft15">
+                        <div class="custom-card-title color-dark">22, July 2020</div>
+                        <div class="text-body-regular color-dark">11:30 am<span class="paddingleft10">45 min</span>
+                        </div>
+                      </div>
+                      <div class=" marginleft15 text-body-regular color-dark">11 more days left</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Adherence</div>
+                  <div class="margintop20">
+                    <div class="display-flex">
+                      <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
+                          alt="alert icon"></div>
+                      <div class="text-body-regular color-dark marginleft15">
+                        <li>You missed <span class="color-red">2 Medications</span> last week</li>
+                        <li>Higher INR, revisit medications</li>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">PT INR Test (05, July, 2020 8:00 am)</div>
-                <div class="margintop20">
-                  <div class="text-body-regular color-dark">INR</div>
-                  <div class="display-flex">
-                    <img class="image15 margintop5 marginright5" src="images/clinical/arrow-up.png" alt="up arrow icon">
-                    <div class="custom-card-title color-red">3.58</div>
+            </div>
+          </div>
+
+          <div class="custom-card col-sm-12 col-md-6 col-lg-4">
+            <div class="bg-white h-100">
+              <div class="display-flex width100 padding20 bg-gray min-height-cards border-green bg-image-green">
+                <div class="margin1020 width25">
+                  <a class="profile-image" href="#"><img src="images/clinical/biguser.png" alt="user profile icon"></a>
+                  <div class="custom-card-title margintop15 color-dark">Day 12</div>
+                </div>
+                <div>
+                  <h5 class="card-title custom-card-title color-dark">Julie John 38/F</h5>
+                  <h6 class="card-subtitle mb-2 custom-card-subtitle color-blue">MR#</h6>
+                  <div class="margintop20">
+                    <div class="custom-card-subtitle color-blue">Mitral Valve Replacement</div>
+                    <div class="custom-card-subtitle color-dark">Hypertension</div>
                   </div>
                 </div>
               </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Symptoms</div>
-                <div class="margintop20">
-                  <div class="display-flex text-body-regular color-dark symptoms">
-                    <li>Fatigue</li>
-                    <li>Headache</li>
-                    <li>Pain</li>
-                  </div>
-                </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
-                <div class="margintop20">
-                  <div class="display-flex">
-                    <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
-                    <div class="marginleft15">
-                      <div class="custom-card-title color-dark">22, July 2020</div>
-                      <div class="text-body-regular color-dark">11:30 am<span class="paddingleft10">45 min</span></div>
+              <div class="padding20 bg-white">
+                <div>
+                  <div class="text-body color-dark border-bottom-gray">Vitals (1, July, 2020 8:00 am)</div>
+                  <div class="width100 margintop15 display-flex">
+                    <div class="width50 display-flex">
+                      <img class="margintop5 image24" src="images/clinical/heartrate.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">Heart Rate</div>
+                        <div class="custom-card-title color-dark">94</div>
+                      </div>
                     </div>
-                    <div class=" marginleft15 text-body-regular color-dark">11 more days left</div>
+                    <div class="display-flex">
+                      <img class="margintop5 image24" src="images/clinical/bloodpressure.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">SBP/DBP</div>
+                        <div class="custom-card-title color-dark">120/90</div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="width100 margintop20 display-flex">
+                    <div class="width50 display-flex">
+                      <img class="margintop5 image24" src="images/clinical/temp.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">Temp</div>
+                        <div class="custom-card-title color-dark">95.5</div>
+                      </div>
+                    </div>
+                    <div class="display-flex">
+                      <img class="margintop5 image24" src="images/clinical/oxyzen.png" alt="heart rate icon">
+                      <div class="marginleft15">
+                        <div class="text-body-regular color-dark">SPO2</div>
+                        <div class="custom-card-title color-dark">97</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="margintop30">
-                <div class="text-body color-dark border-bottom-gray">Adherence</div>
-                <div class="margintop20">
-                  <div class="display-flex">
-                    <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
-                        alt="alert icon"></div>
-                    <div class="text-body-regular color-dark marginleft15">
-                      <li>You missed <span class="color-red">2 Medications</span> last week</li>
-                      <li>Higher INR, revisit medications</li>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">PT INR Test (05, July, 2020 8:00 am)</div>
+                  <div class="margintop20">
+                    <div class="text-body-regular color-dark">INR</div>
+                    <div class="display-flex">
+                      <img class="image15 margintop5 marginright5" src="images/clinical/arrow-up.png"
+                        alt="up arrow icon">
+                      <div class="custom-card-title color-red">3.58</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Symptoms</div>
+                  <div class="margintop20">
+                    <div class="display-flex text-body-regular color-dark symptoms">
+                      <li>Fatigue</li>
+                      <li>Headache</li>
+                      <li>Pain</li>
+                    </div>
+                  </div>
+                </div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Upcoming Appointment</div>
+                  <div class="margintop20">
+                    <div class="display-flex">
+                      <img class="margintop10 image24" src="images/clinical/time.png" alt="time icon">
+                      <div class="marginleft15">
+                        <div class="custom-card-title color-dark">22, July 2020</div>
+                        <div class="text-body-regular color-dark">11:30 am<span class="paddingleft10">45 min</span>
+                        </div>
+                      </div>
+                      <div class=" marginleft15 text-body-regular color-dark">11 more days left</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="margintop30">
+                  <div class="text-body color-dark border-bottom-gray">Adherence</div>
+                  <div class="margintop20">
+                    <div class="display-flex">
+                      <div class="paddingtop10"><img class="image2417" src="images/clinical/missing-alert.png"
+                          alt="alert icon"></div>
+                      <div class="text-body-regular color-dark marginleft15">
+                        <li>You missed <span class="color-red">2 Medications</span> last week</li>
+                        <li>Higher INR, revisit medications</li>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -653,7 +692,27 @@
   </div>
   <!--Main Layout-->
   <!-- Footer -->
-  <div class="clinical-footer">
+  <footer class="clinical-footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-12">
+          <div class="inner-content">
+            <p>© 2020 Company Name. All rights reserved</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <!-- <div class="clinical-footer">
     <p>© 2020 Company Name. All rights reserved </p>
-  </div>
+  </div> -->
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"
+    integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js"
+    integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy"
+    crossorigin="anonymous"></script>
 </body>

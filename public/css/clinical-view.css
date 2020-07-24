@@ -6,6 +6,10 @@
     background: #f7f9fa;
 }
 
+.bg-white {
+    background: #ffffff;
+}
+
 .bg-image-red {
     background-image: url(../images/clinical/card-red.png);
     background-position: 0 -2px;
@@ -40,7 +44,7 @@
 }
 
 .min-height-cards {
-    min-height: 155px;
+    min-height: 159px;
 }
 
 .padding20 {
@@ -95,8 +99,16 @@
     margin-right: 5px;
 }
 
+.margin10 {
+    margin: 10px;
+}
+
 .width100 {
     width: 100%;
+}
+
+.width95 {
+    width: 95%;
 }
 
 .width25 {
@@ -300,6 +312,10 @@ header .full-width-divider .nav-tabs>li>a:hover {
     font-size: 18px;
 }
 
+.full-width-divider {
+    background-color: #fff;
+}
+
 .full-width-divider:after {
     content: "" !important;
     position: absolute;
@@ -330,7 +346,7 @@ header .full-width-divider .nav-tabs>li>a:hover {
 }
 
 .nav-tabs.nav-tabs-margin {
-    margin: auto 120px;
+    margin: auto 60px;
     padding: 0 30px;
 }
 
@@ -340,7 +356,7 @@ header .full-width-divider .nav-tabs>li>a:hover {
 
 .tab-content .custom-tab-pane.active {
     display: flex;
-    padding: 50px 20px;
+    padding: 50px 0px;
 }
 
 .tab-content .custom-tab-pane {
@@ -375,6 +391,11 @@ header .full-width-divider .nav-tabs>li>a:hover {
     background: #fff;
     border: 1px solid #123e95;
     border-radius: 4px;
+    width: fit-content;
+}
+
+.risk-patients-tabs .nav-tabs {
+    border: none;
 }
 
 .risk-patients-tabs .nav-tabs {
@@ -470,19 +491,14 @@ header .full-width-divider .risk-patients-tabs .nav-tabs>li>a.active, .nav-tabs>
     border: 1px solid #dddddd;
 }
 
-.custom-card.card {
-    margin: 15px auto;
+.custom-card {
     box-shadow: none;
-    padding: 0;
+    padding: 10px;
 }
 
 /* FOOTER */
 
 .clinical-footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    width: 100%;
     background-color: #3e3e3f;
     font-family: "Open Sans";
     font-size: 16px;
@@ -490,8 +506,7 @@ header .full-width-divider .risk-patients-tabs .nav-tabs>li>a.active, .nav-tabs>
  }
 
  .clinical-footer p {
-     padding: 50px 90px;
-     margin: auto 80px;
+     padding: 50px 0px;
  }
 
  @media only screen and (max-width: 1024px) and (min-width: 768px) {
@@ -521,39 +536,31 @@ header .full-width-divider .risk-patients-tabs .nav-tabs>li>a.active, .nav-tabs>
     .paddingLeft45px.container {
         padding-left: 45px;
     }
- }
 
- /* @media (min-width: 768px) {
-    .col-md-6 {
-    flex: 0 0 46% !important;
-    max-width: 50%;
-}
- } */
-
-
- /* @media screen and (max-width: 575px) {
-    .cards-row.row .custom-card {
-        flex: 0 0 100%;
+    .nav-tabs.nav-tabs-margin {
+        margin: auto;
+    }
+    .navbar .green-border {
+        display: none;
+    }
+    .navbar-dashboard {
+        right: 195px;
     }
  }
 
- @media screen and (min-width: 576px) and (max-width: 767px) {
-    .cards-row.row .custom-card {
-        flex: 0 0 50%;
-    }
+ @media only screen and (max-width: 1200px) and (min-width: 1025px) {
+     .nav.risk-tabs li a {
+         width: 100%;
+         padding: 9px 9px;
+     }
  }
 
- @media screen and (min-width: 768px) and (max-width: 991px) {
-    .cards-row.row .custom-card {
-        flex: 0 0 30%;
+ @media (max-width: 768px) {
+    .nav-tabs.nav-tabs-margin {
+        margin: 0;
+        padding: 0;
     }
  }
-
- @media screen and (min-width: 992px) and (max-width: 1199px) {
-    .cards-row.row .custom-card {
-        flex: 0 0 30%;
-    }
- } */
 
  /* Transition */
 
@@ -583,5 +590,52 @@ header .full-width-divider .risk-patients-tabs .nav-tabs>li>a.active, .nav-tabs>
     width: 100px;
     position: absolute;
     bottom: 0px;
-    left: 183px;
  }
+
+
+  /* CSS */	
+  .navbar.custom-bg {	
+    background-color: #123e95!important;	
+    padding: 1.5rem 1rem;	
+}	
+.navbar-brand.brand-logo {	
+      background-color: #b8e1ff;	
+      font-family: "Open Sans";	
+      font-weight: 400;	
+      font-size: 18px;	
+      padding: 3px 25px;
+      margin-right: 4rem;	
+      color: #424242;	
+}	
+
+@media only screen and (max-width: 767px) {
+    .tab-content .custom-tab-pane.active {
+        display: block;
+    }
+    .my-patients {
+        margin-right: 0;
+    }
+    .my-patients-search.form-control {
+        display: block;
+        width: 100%;
+        height: 40px;
+    }
+    .search-icon {
+        position: relative;
+        bottom: 33px;
+        left: 10px;
+    }
+    .nav.risk-tabs li a {
+        width: 100%;
+        text-align: center;
+        padding: 9px 12px;
+        margin-bottom: 0;
+    }
+    .navbar .green-border {
+        display: none;
+    }
+
+    .navbar-brand.brand-logo {
+        margin-right: 1rem;
+    }
+}
