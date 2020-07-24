@@ -350,7 +350,7 @@ header .full-width-divider .nav-tabs>li>a:hover {
 }
 
 .nav-tabs.nav-tabs-margin {
-    margin: auto 60px;
+    margin: auto 90px;
     padding: 0 30px;
 }
 
@@ -539,6 +539,13 @@ header .full-width-divider .risk-patients-tabs .nav-tabs>li>a.active, .nav-tabs>
     .nav-tabs.nav-tabs-margin {
         margin: auto;
     }
+    .navbar .green-border {
+        display: none;
+    }
+    .navbar-dashboard {
+        position: relative;
+        right: 195px;
+    }
  }
 
  @media (max-width: 768px) {
@@ -576,7 +583,7 @@ header .full-width-divider .risk-patients-tabs .nav-tabs>li>a.active, .nav-tabs>
     width: 100px;
     position: absolute;
     bottom: 0px;
-    left: 263px;
+    left: 312px;
  }
 
 
@@ -590,12 +597,10 @@ header .full-width-divider .risk-patients-tabs .nav-tabs>li>a.active, .nav-tabs>
       font-family: "Open Sans";	
       font-weight: 400;	
       font-size: 18px;	
-      padding: 3px 25px;	
+      padding: 3px 25px;
+      margin-right: 4rem;	
       color: #424242;	
 }	
-.navbar-icons li {	
-  margin-top: 15px;	
-}
 
 @media only screen and (max-width: 767px) {
     .tab-content .custom-tab-pane.active {
@@ -619,5 +624,12 @@ header .full-width-divider .risk-patients-tabs .nav-tabs>li>a.active, .nav-tabs>
         text-align: center;
         padding: 9px 12px;
         margin-bottom: 0;
+    }
+    .navbar .green-border {
+        display: none;
+    }
+
+    .navbar-brand.brand-logo {
+        margin-right: 1rem;
     }
 }
